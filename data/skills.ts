@@ -1,0 +1,77 @@
+import type { SkillGroup } from "@/lib/types";
+
+/** Grouped by capability. No proficiency percentages — by design. */
+export const skillGroups: SkillGroup[] = [
+  {
+    id: "analysis",
+    title: "Data Analysis",
+    description: "Cleaning, analysing and interpreting programme and survey data.",
+    icon: "chart",
+    items: ["Python", "SQL", "SPSS", "Excel"],
+    tags: ["data", "research"],
+  },
+  {
+    id: "bi",
+    title: "Business Intelligence",
+    description: "Dashboards that make programme performance visible.",
+    icon: "bar",
+    items: ["Power BI"],
+    tags: ["data", "programme"],
+  },
+  {
+    id: "geo",
+    title: "Geospatial",
+    description: "Mapping reach, resources and risk.",
+    icon: "map",
+    items: ["QGIS"],
+    tags: ["data", "one-health"],
+  },
+  {
+    id: "me",
+    title: "Monitoring & Evaluation",
+    description: "From data collection to evidence for decisions.",
+    icon: "clipboard",
+    items: [
+      "Data collection",
+      "Data quality assurance",
+      "Indicator tracking",
+      "Programme reporting",
+      "Survey analysis",
+      "Quantitative analysis",
+      "Qualitative thematic analysis",
+    ],
+    tags: ["data", "programme", "research", "sustainability"],
+  },
+  {
+    id: "pm",
+    title: "Programme Management",
+    description: "Planning, coordinating and delivering with partners.",
+    icon: "kanban",
+    items: [
+      "Project planning",
+      "Stakeholder management",
+      "Workplans",
+      "Risk management",
+      "Reporting",
+      "Facilitation",
+      "Workshop coordination",
+    ],
+    tags: ["programme", "capacity", "sustainability"],
+  },
+  {
+    id: "ph",
+    title: "Public Health",
+    description: "The domain the tools serve.",
+    icon: "health",
+    items: [
+      "Antimicrobial resistance",
+      "One Health",
+      "Health policy",
+      "AMR governance",
+      "Antimicrobial stewardship",
+      "Health systems",
+      "Public-health programming",
+    ],
+    tags: ["amr", "one-health", "policy"],
+  },
+];

@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+.env*.local
+.vercel
+*.tsbuildinfo
+
+# Private working notes — kept on your computer, never uploaded.
+# (Needed because GitHub Pages is free only for PUBLIC repositories.)
+CONTENT_TO_VERIFY.md
