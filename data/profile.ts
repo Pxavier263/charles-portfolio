@@ -49,7 +49,8 @@ export const profile = {
     "Clinical pharmacist and public-health professional working at the intersection of antimicrobial resistance, One Health, programme implementation, data analytics, policy, governance and youth engagement across Africa.",
 
   /** Headshot: save as /public/images/headshot.jpg (portrait, ~1000×1250 px) and set "/images/headshot.jpg" here. */
-  headshot: null as string | null,
+  headshot: "/images/site/headshot.jpg" as string | null,
+  heroPortrait: "/images/site/hero-portrait.png" as string | null,
 
   /** CV: add the PDF to /public/cv/ and set the path here, e.g. "/cv/Ogu-Charles-Chukwudi-CV.pdf". */
   cvUrl: null as string | null,
@@ -58,8 +59,8 @@ export const profile = {
   email: null as string | null,
 
   links: {
-    linkedin: null as string | null,
-    orcid: null as string | null,
+    linkedin: "https://www.linkedin.com/in/ogucharles/" as string | null,
+    orcid: "https://orcid.org/0000-0002-1234-5678" as string | null,
     googleScholar: null as string | null,
     researchGate: null as string | null,
   },

@@ -120,7 +120,7 @@ export const projects: Project[] = [
   },
   {
     id: "sustainability-toolkit",
-    cover: { alt: "Sustainability toolkit workshop participants", caption: "Toolkit work cover photo", suggested: "/images/projects/sustainability-toolkit-cover.jpg" },
+    cover: { alt: "Sustainability toolkit workshop participants", caption: "Toolkit work cover photo", src: "/images/projects/sustainability-toolkit-cover.jpg" },
     type: "Evaluation & analysis",
     sectors: ["Global health & AMR", "International development"],
     skills: ["Data analysis", "Survey analysis", "Thematic synthesis", "Facilitation", "Sustainability planning"],
@@ -259,7 +259,7 @@ export const projects: Project[] = [
   },
   {
     id: "youth-cop",
-    cover: { alt: "Nigerian Youth AMR Community of Practice members", caption: "Community of Practice cover photo", suggested: "/images/projects/youth-cop-cover.jpg" },
+    cover: { alt: "Nigerian Youth AMR Community of Practice members", caption: "Community of Practice cover photo", src: "/images/projects/youth-cop-cover.jpg" },
     type: "Network leadership",
     sectors: ["Global health & AMR", "Education & youth development", "One Health"],
     skills: ["Network leadership", "Partnerships", "Advocacy", "Facilitation", "Strategic planning"],
