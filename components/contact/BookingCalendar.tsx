@@ -67,7 +67,7 @@ const SCHEMA = {
 /**
  * Availability calendar with consultation slots.
  * Slots come from data/conversion.ts (your time zone) and are shown in the visitor's time zone.
- * Without a scheduling service this sends a booking REQUEST (confirmed by email) — the page says so.
+ * Without a scheduling service this sends a booking REQUEST (confirmed by email): the page says so.
  */
 export function BookingCalendar() {
   const [now, setNow] = useState<number | null>(null);
@@ -119,7 +119,7 @@ export function BookingCalendar() {
   const dayLabel = (d: string) => new Intl.DateTimeFormat("en-GB", { timeZone: "UTC", weekday: "long", day: "numeric", month: "long" }).format(new Date(`${d}T12:00:00Z`));
   const sameTz = visitorTz === availability.timeZone;
   const slotText = (s: Slot) =>
-    `${fmt(s.utc, visitorTz || availability.timeZone, { weekday: "long", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" })}${visitorTz && !sameTz ? ` (${visitorTz.replace(/_/g, " ")}) — ${fmt(s.utc, availability.timeZone, { hour: "2-digit", minute: "2-digit" })} ${availability.timeZoneLabel}` : ` ${availability.timeZoneLabel}`}`;
+    `${fmt(s.utc, visitorTz || availability.timeZone, { weekday: "long", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" })}${visitorTz && !sameTz ? ` (${visitorTz.replace(/_/g, " ")}), which is ${fmt(s.utc, availability.timeZone, { hour: "2-digit", minute: "2-digit" })} ${availability.timeZoneLabel}` : ` ${availability.timeZoneLabel}`}`;
   const selectedDay = days.find((d) => d.date === day);
   const set = (k: string) => (val: string) => { const n = { ...v, [k]: val }; setV(n); if (tried) setErrors(validate(n, SCHEMA)); };
 
@@ -204,7 +204,7 @@ export function BookingCalendar() {
                         aria-label={`${dayLabel(c.date)}: ${c.slots.length ? `${c.slots.length} slot${c.slots.length > 1 ? "s" : ""} available` : "no slots"}`}
                         onClick={() => { setDay(c.date); setSlot(null); }}
                         className={`relative flex aspect-square w-full flex-col items-center justify-center rounded-xl text-sm font-semibold transition-colors ${
-                          day === c.date ? "is-on" : c.slots.length ? "bg-[rgb(var(--accent-wash))] text-teal-800 hover:ring-2 hover:ring-teal-500 dark:text-teal-200" : "cursor-not-allowed opacity-35"
+                          day === c.date ? "is-on" : c.slots.length ? "bg-[rgb(var(--accent-wash))] text-teal-800 hover:ring-2 hover:ring-orange-500 dark:text-teal-200" : "cursor-not-allowed opacity-35"
                         }`}
                       >
                         {Number(c.date.slice(8))}
@@ -233,7 +233,7 @@ export function BookingCalendar() {
               <ul className="mt-4 grid gap-2 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
                 {selectedDay.slots.map((s) => (
                   <li key={s.utc}>
-                    <button type="button" onClick={() => { setSlot(s); track("booking_slot_select", { date: s.date }); }} className="w-full rounded-xl border hairline px-4 py-3 text-left transition-colors hover:border-teal-500 hover:bg-[rgb(var(--accent-wash))]">
+                    <button type="button" onClick={() => { setSlot(s); track("booking_slot_select", { date: s.date }); }} className="w-full rounded-xl border hairline px-4 py-3 text-left transition-colors hover:border-orange-500 hover:bg-[rgb(var(--accent-wash))]">
                       <span className="block font-semibold">{fmt(s.utc, visitorTz || availability.timeZone, { hour: "2-digit", minute: "2-digit" })}</span>
                       {!sameTz && <span className="block text-xs muted">{s.time} {availability.timeZoneLabel}</span>}
                     </button>

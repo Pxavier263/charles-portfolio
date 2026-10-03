@@ -6,7 +6,7 @@ export const inputCls =
   "mt-1.5 w-full rounded-xl border bg-[rgb(var(--surface))] px-4 py-3 text-[rgb(var(--text))] placeholder:text-[rgb(var(--muted)/0.75)] transition-colors focus:outline-none focus:ring-2";
 
 const stateCls = (err?: string) =>
-  err ? "border-red-600 focus:border-red-600 focus:ring-red-600/25 dark:border-red-400" : "hairline focus:border-teal-500 focus:ring-teal-500/30";
+  err ? "border-red-600 focus:border-red-600 focus:ring-red-600/25 dark:border-red-400" : "hairline focus:border-teal-700 focus:ring-teal-500/30";
 
 interface Base {
   id: string;

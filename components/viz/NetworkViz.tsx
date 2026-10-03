@@ -28,7 +28,7 @@ export function NetworkViz() {
           <text x={cx} y={cy + 14} textAnchor="middle" fill="white" style={{ fontSize: 9, letterSpacing: "0.12em" }}>MEMBERS</text>
           {nodes.map((n, i) => (
             <g key={n.g} onMouseEnter={() => setHover(i)} onMouseLeave={() => setHover(null)}>
-              <circle cx={n.x} cy={n.y} r={hover === i ? 9 : 6} fill={hover === i ? "rgb(184 150 63)" : "rgb(var(--surface))"} stroke="rgb(var(--accent))" strokeWidth={2} className="transition-all" />
+              <circle cx={n.x} cy={n.y} r={hover === i ? 9 : 6} fill={hover === i ? "rgb(var(--highlight))" : "rgb(var(--surface))"} stroke="rgb(var(--accent))" strokeWidth={2} className="transition-all" />
               <text
                 x={n.x + (n.x < cx - 5 ? -14 : n.x > cx + 5 ? 14 : 0)}
                 y={n.y + (Math.abs(n.x - cx) < 6 ? -14 : 4)}

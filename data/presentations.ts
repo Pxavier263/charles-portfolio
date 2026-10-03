@@ -36,7 +36,7 @@ export const presentations: Presentation[] = [
     description:
       "Participated in an intensive regional course on antimicrobial resistance in bacterial pathogens, including an oral presentation.",
     tags: ["amr", "research", "capacity"],
-    image: { alt: "Oral presentation during the NICD/WCS course", caption: "NICD/WCS course — oral presentation", suggested: "/images/presentations/nicd-course-2026.jpg" },
+    image: { alt: "Oral presentation during the NICD/WCS course", caption: "NICD/WCS course: oral presentation", suggested: "/images/presentations/nicd-course-2026.jpg" },
     verify: "Confirm the WCS expansion (Wellcome Connecting Science) and the oral presentation title.",
   },
   {

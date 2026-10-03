@@ -45,14 +45,14 @@ export function ContactOptions({ compact = false }: { compact?: boolean }) {
               <a
                 href={withBase(o.href)}
                 data-cta={`contact-${o.id}`}
-                className={`${cls} hover:-translate-y-0.5 hover:border-teal-500 hover:shadow-soft motion-reduce:hover:translate-y-0`}
+                className={`${cls} hover:-translate-y-0.5 hover:border-orange-500 hover:shadow-soft motion-reduce:hover:translate-y-0`}
                 {...(o.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 {...(o.download ? { download: true } : {})}
               >
                 {inner}
               </a>
             ) : (
-              <span className={`${cls} cursor-not-allowed opacity-60`} title="To be added" aria-label={`${o.title} (to be added)`}>{inner}</span>
+              <span className={`${cls} cursor-not-allowed border-dashed opacity-75`} title="To be added" aria-label={`${o.title} (to be added)`}>{inner}</span>
             )}
           </li>
         );

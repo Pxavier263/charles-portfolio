@@ -10,7 +10,7 @@ export function Pipeline() {
           <li key={s.step} className="flex gap-3 rounded-xl bg-[rgb(var(--surface))] p-3 ring-1 ring-[rgb(var(--line)/0.06)]">
             <span
               className={`grid h-7 w-7 flex-none place-items-center rounded-full text-xs font-bold ${
-                i === cohortPipeline.length - 1 ? "bg-gold-500 text-ink-950" : "bg-teal-600 text-white dark:bg-teal-400 dark:text-ink-950"
+                i === cohortPipeline.length - 1 ? "bg-orange-500 text-ink-950" : "bg-teal-600 text-white dark:bg-teal-400 dark:text-ink-950"
               }`}
               aria-hidden
             >

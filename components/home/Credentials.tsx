@@ -5,7 +5,7 @@ import { Reveal } from "../ui/Reveal";
 const items = [
   { icon: BadgeCheck, title: "Licensed pharmacist", sub: "Pharmacists Council of Nigeria" },
   { icon: GraduationCap, title: "B.Pharm · MSc Public Health (in progress)", sub: "University of Port Harcourt · Ahmadu Bello University" },
-  { icon: Mic, title: "ICID 2026 — accepted poster", sub: "Madrid, 10–13 November 2026" },
+  { icon: Mic, title: "ICID 2026: accepted poster", sub: "Madrid, 10–13 November 2026" },
   { icon: Microscope, title: "AMR in Bacterial Pathogens – Africa Course", sub: "NICD / WCS, Johannesburg, 2026" },
   { icon: Award, title: "2025 Antibiotic Guardian Award", sub: "Won by Ducit Blue Foundation's Pan-African youth AMR programme, which I contribute to" },
 ];
@@ -16,7 +16,7 @@ export function Credentials() {
       <div className="container">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <h2 id="cred-title" className="text-2xl font-medium md:text-3xl">Credentials &amp; recognition</h2>
-          <Link href="/about#recognition" className="text-sm font-semibold underline decoration-teal-500 underline-offset-4">Full profile</Link>
+          <Link href="/about#recognition" className="text-sm font-semibold underline decoration-orange-500 underline-offset-4">Full profile</Link>
         </div>
         <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
           {items.map((c, i) => (

@@ -66,8 +66,21 @@ Do these in the project folder:
 2. Install **GitHub Desktop** ([desktop.github.com](https://desktop.github.com)) and sign in.
 3. Unzip `charles-portfolio.zip`.
    - The folder contains a hidden `.github` folder. Don't delete it: it holds the automatic deployment.
-4. In GitHub Desktop, go to **File → Add local repository…** and choose the folder. When it asks, click **create a repository** and set the **Name** from step 1, e.g. `charlesogu.github.io`. Click **Create repository**.
-5. Click **Publish repository**. **Untick "Keep this code private"**, because Pages is free only for public repositories. Then click **Publish**.
+4. **Tell GitHub Desktop about the folder.** Right now it is just an ordinary folder on your computer; this step turns it into a "repository" (a project GitHub can track).
+   1. In GitHub Desktop, open the **File** menu and click **Add local repository…**
+   2. Click **Choose…**, find the unzipped `charles-portfolio` folder, select it and confirm. Pick the folder itself, the one that contains `app`, `data`, `public` and `package.json`, not a folder above or inside it.
+   3. A message appears saying the folder **does not appear to be a Git repository**. That is normal. Click the blue link **create a repository** in that message.
+   4. A **Create a new repository** window opens with the details already filled in. **Do not change the Name or Local path**: changing them makes GitHub Desktop create a new, empty folder instead of using yours. Check that:
+      - **Initialize this repository with a README** is **unticked** (the project already has one)
+      - **Git ignore** is **None**
+      - **License** is **None**
+   5. Click **Create repository**.
+   6. **Check it worked.** Open the **History** tab on the left. You should see one entry, "Initial commit". Click it and scroll the file list: `.github/workflows/deploy-github-pages.yml` should be there, and `CONTENT_TO_VERIFY.md` should **not** (it is deliberately kept off GitHub).
+5. **Upload it to GitHub (this is where you choose the name).**
+   1. Click the blue **Publish repository** button at the top of the window.
+   2. In the **Name** box, type the name you chose in step 1, e.g. `charlesogu.github.io`. This name becomes your web address; your folder on the computer keeps its own name, and that's fine.
+   3. **Untick "Keep this code private"**, because Pages is free only for public repositories.
+   4. Click **Publish repository**. When it finishes, the button changes to **View on GitHub**, and your project is online.
 
 ---
 
@@ -113,6 +126,9 @@ This URL is not a secret, because every visitor's browser uses it. A variable is
 ---
 
 ## 8. Launch checklist
+
+**How to edit and verify each item: [`EDITING-GUIDE.md`](./EDITING-GUIDE.md).** Every deployment also runs two automatic checks. Find them under Actions → the latest run → **Summary**.
+
 
 - [ ] The live site shows no amber "To confirm" badges or empty photo boxes (`reviewMode: false` was set before pushing).
 - [ ] All photos load and are compressed.

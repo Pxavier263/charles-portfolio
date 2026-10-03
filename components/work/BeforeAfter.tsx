@@ -11,7 +11,7 @@ import { withBase } from "@/lib/paths";
 
 type BA = NonNullable<Project["beforeAfter"]>;
 
-/** Draggable photo comparison — used when both sides have a real image. Keyboard: the slider is a native range input. */
+/** Draggable photo comparison: used when both sides have a real image. Keyboard: the slider is a native range input. */
 function PhotoSlider({ ba }: { ba: BA }) {
   const [pos, setPos] = useState(50);
   return (

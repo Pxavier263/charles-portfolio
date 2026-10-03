@@ -302,7 +302,20 @@ To add real work:
 
 ---
 
-## 7. Deploying
+## 7. Checks and editing
+
+**How to edit content and verify the launch checklist: [`EDITING-GUIDE.md`](./EDITING-GUIDE.md).**
+
+| Command | What it does |
+|---|---|
+| `npm run check:launch` | Reads the content files and lists unfinished items: review mode, contact details, missing or oversized photos, placeholders, `verify:` notes, reply time, form delivery. Add `-- --strict` to fail when must-fix items remain. |
+| `npm run build:static` | Builds the static site into `out/`. Works on Windows, Mac and Linux. |
+| `npm run check:site` | Checks the built site for broken links, sections, images and downloads, and for placeholders left visible when review mode is off. Fails on any problem. |
+| `npm run check` | Runs all three in order. |
+
+The GitHub Pages workflow runs the launch check (as a report) and the site check (which blocks a broken deployment) on every push. Both reports appear on the run's Summary page.
+
+## 8. Deploying
 
 **Full step-by-step guide: [`DEPLOY.md`](./DEPLOY.md)**
 
@@ -312,7 +325,7 @@ To add real work:
 
 All three were tested — including a GitHub Pages sub-folder build with real photos, CV download and form submission — with no missing files, broken links or accessibility violations. The social share image is a static file, `public/og.png`; replace it with your own 1200×630 image whenever you like.
 
-## 8. Quality review (performed on this build)
+## 9. Quality review (performed on this build)
 
 ### Automated checks
 

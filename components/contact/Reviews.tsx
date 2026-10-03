@@ -13,7 +13,7 @@ function Stars({ value, size = "h-4 w-4" }: { value: number; size?: string }) {
           <span key={i} className={`relative ${size}`} aria-hidden>
             <Star className={`absolute inset-0 ${size} text-[rgb(var(--line)/0.2)]`} fill="currentColor" strokeWidth={0} />
             <span className="absolute inset-0 overflow-hidden" style={{ width: `${fill * 100}%` }}>
-              <Star className={`${size} text-gold-500`} fill="currentColor" strokeWidth={0} />
+              <Star className={`${size} text-orange-500`} fill="currentColor" strokeWidth={0} />
             </span>
           </span>
         );

@@ -21,7 +21,7 @@ const SCHEMA = {
   name: [rules.required("Please enter your name."), rules.min(2, "Your name")],
   email: [rules.required("Please enter your email address."), rules.email()],
   projectType: [rules.required("Please choose the kind of project.")],
-  budget: [rules.required("Please choose a budget range — 'Not sure yet' is fine.")],
+  budget: [rules.required("Please choose a budget range. 'Not sure yet' is fine.")],
   details: [rules.required("Please tell me a little about the project."), rules.min(30, "Project details"), rules.max(2000)],
   consent: [rules.checked("Please confirm I may use your details to reply.")],
 };
@@ -183,7 +183,7 @@ export function EnquiryForm() {
         </button>
         <p className="text-xs muted" role="status" aria-live="polite">
           {state === "error" && <span className="text-red-700 dark:text-red-400">Something went wrong sending your enquiry. Please try again, or use another contact option below.</span>}
-          {state === "idle" && !available && "The form will be activated shortly — please use another contact option for now."}
+          {state === "idle" && !available && "The form will be activated shortly. Please use another contact option for now."}
         </p>
       </div>
     </form>

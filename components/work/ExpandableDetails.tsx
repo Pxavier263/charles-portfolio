@@ -18,7 +18,7 @@ export function ExpandableDetails({ sections }: { sections: DetailItem[] }) {
   return (
     <div>
       <div className="mb-3 flex justify-end">
-        <button type="button" onClick={() => setOpen(allOpen ? [] : sections.map((s) => s.id))} className="text-sm font-semibold underline decoration-teal-500 underline-offset-4">
+        <button type="button" onClick={() => setOpen(allOpen ? [] : sections.map((s) => s.id))} className="text-sm font-semibold underline decoration-orange-500 underline-offset-4">
           {allOpen ? "Collapse all" : "Expand all"}
         </button>
       </div>

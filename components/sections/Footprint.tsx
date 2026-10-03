@@ -16,7 +16,7 @@ const project = (lon: number, lat: number) => ({
 const TYPES: { id: FootprintType; color: string; shape: "circle" | "square" | "diamond" | "triangle" | "ring" }[] = [
   // Colours come from the site palette (globals.css); shapes carry the meaning too.
   { id: "Project Delivery", color: "rgb(var(--accent))", shape: "circle" },
-  { id: "Conference", color: "rgb(var(--highlight))", shape: "diamond" },
+  { id: "Conference", color: "rgb(var(--primary))", shape: "diamond" },
   { id: "Training", color: "rgb(var(--slate))", shape: "square" },
   { id: "Presentation", color: "rgb(var(--text))", shape: "triangle" },
   { id: "Regional Programme", color: "rgb(var(--accent))", shape: "ring" },
@@ -70,7 +70,7 @@ export function Footprint() {
                 const p = project(lon, lat);
                 return <circle key={i} cx={p.x} cy={p.y} r={2.4} fill="rgb(var(--line) / 0.14)" />;
               })}
-              {/* Regional programme reach — a soft halo over the continent, not a travel marker */}
+              {/* Regional programme reach: a soft halo over the continent, not a travel marker */}
               {(filter === "all" || filter === "Regional Programme") && (() => {
                 const c = project(18, 2);
                 return (
@@ -112,7 +112,7 @@ export function Footprint() {
                       type="button"
                       onClick={() => setActive(f.id)}
                       aria-expanded={active === f.id}
-                      className={`w-full rounded-2xl border p-4 text-left transition ${active === f.id ? "border-teal-500 bg-[rgb(var(--surface))] shadow-soft" : "hairline hover:border-teal-500/50"}`}
+                      className={`w-full rounded-2xl border p-4 text-left transition ${active === f.id ? "border-teal-500 bg-[rgb(var(--surface))] shadow-soft" : "hairline hover:border-orange-500/50"}`}
                     >
                       <span className="flex items-center gap-3">
                         <svg width="16" height="16" viewBox="-9 -9 18 18" aria-hidden><Marker shape={t.shape} color={t.color} size={6} /></svg>
@@ -124,7 +124,7 @@ export function Footprint() {
                           <span className="block text-xs muted">{f.types.join(" · ")}</span>
                           <span className="mt-2 block space-y-1">
                             {f.activities.map((a) => (
-                              <span key={a} className="block text-sm">— {a}</span>
+                              <span key={a} className="flex gap-2 text-sm"><span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-[rgb(var(--accent))]" aria-hidden /><span>{a}</span></span>
                             ))}
                           </span>
                           <VerifyBadge note={f.verify} className="mt-2" />

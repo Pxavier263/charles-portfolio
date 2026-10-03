@@ -62,7 +62,7 @@ export function Gallery({ photos, title }: { photos: ImagePlaceholder[]; title: 
         ref={ref}
         onClose={() => setOpen(null)}
         onClick={(e) => e.target === ref.current && setOpen(null)}
-        aria-label={`${title} — photos`}
+        aria-label={`${title}: photos`}
         className="m-0 h-full max-h-none w-full max-w-none bg-transparent p-0"
       >
         {open !== null && real[open] && (

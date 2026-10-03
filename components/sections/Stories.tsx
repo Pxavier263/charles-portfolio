@@ -17,7 +17,7 @@ export function Stories() {
               <p className="mt-4 leading-relaxed muted">{s.body}</p>
               <div className="mt-5 flex flex-wrap items-center gap-3">
                 {s.projectId && (
-                  <a href={withBase(`/work/${s.projectId}`)} className="text-sm font-semibold underline decoration-teal-500 underline-offset-4">
+                  <a href={withBase(`/work/${s.projectId}`)} className="text-sm font-semibold underline decoration-orange-500 underline-offset-4">
                     See the related case study<span className="sr-only">: {s.title}</span>
                   </a>
                 )}

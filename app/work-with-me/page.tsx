@@ -18,7 +18,7 @@ import { show } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Work with me",
   description:
-    "Send an enquiry, estimate your project, or book a free consultation with Ogu Charles Chukwudi — M&E, programme data, sustainability facilitation and youth capacity building for AMR and One Health programmes.",
+    "Send an enquiry, estimate your project, or book a free consultation with Ogu Charles Chukwudi, offering M&E, programme data, sustainability facilitation and youth capacity building for AMR and One Health programmes.",
   alternates: { canonical: "/work-with-me" },
 };
 
@@ -70,7 +70,7 @@ export default function WorkWithMe() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-4 text-sm"><Link href="/services" className="font-semibold underline decoration-teal-500 underline-offset-4">See services in detail</Link></p>
+              <p className="mt-4 text-sm"><Link href="/services" className="font-semibold underline decoration-orange-500 underline-offset-4">See services in detail</Link></p>
             </div>
           </Reveal>
         </div>

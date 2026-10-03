@@ -23,9 +23,9 @@ export const PROJECT_TYPES = [
 export const BUDGETS = ["Under $2,000", "$2,000 – $5,000", "$5,000 – $15,000", "$15,000 or more", "Not sure yet / to discuss"];
 
 export const TIMELINES = [
-  { id: "urgent", label: "Urgent — under 3 weeks" },
-  { id: "standard", label: "Standard — 3 to 8 weeks" },
-  { id: "flexible", label: "Flexible — 8 weeks or more" },
+  { id: "urgent", label: "Urgent (under 3 weeks)" },
+  { id: "standard", label: "Standard (3 to 8 weeks)" },
+  { id: "flexible", label: "Flexible (8 weeks or more)" },
   { id: "exploring", label: "Just exploring" },
 ];
 
@@ -59,7 +59,7 @@ export const pricing = {
   ],
   /** Timeline multipliers on cost (e.g. a premium for urgent work). PLACEHOLDERS. */
   timelineFactor: { urgent: 1.25, standard: 1.1, flexible: 1, exploring: 1 } as Record<string, number>,
-  /** Working days per week you can give one client — used for the duration estimate. PLACEHOLDER. */
+  /** Working days per week you can give one client: used for the duration estimate. PLACEHOLDER. */
   daysPerWeek: 3,
   disclaimer:
     "Indicative only. A firm quote follows a short call about your programme, data and deliverables.",

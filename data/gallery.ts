@@ -22,7 +22,7 @@ import type { Activity } from "@/lib/types";
 export const activities: Activity[] = [
   {
     id: "icid-2026",
-    title: "ICID 2026 — accepted poster presentation",
+    title: "ICID 2026: accepted poster presentation",
     date: "10–13 November 2026",
     sortDate: "2026-11-10",
     location: "Madrid, Spain",
@@ -30,7 +30,7 @@ export const activities: Activity[] = [
     upcoming: true,
     description: "Poster on building Pan-African youth capacity for One Health AMR action through structured internship and mentorship.",
     photos: [
-      { alt: "Charles presenting his poster at ICID 2026", caption: "Poster presentation — ICID 2026", suggested: "/images/activities/icid-2026-poster.jpg" },
+      { alt: "Charles presenting his poster at ICID 2026", caption: "Poster presentation, ICID 2026", suggested: "/images/activities/icid-2026-poster.jpg" },
     ],
     enabled: true,
   },
@@ -43,8 +43,8 @@ export const activities: Activity[] = [
     category: "Workshop",
     description: "Facilitating sessions on sustainability planning, resource mobilisation, diagnostics and exit & continuity.",
     photos: [
-      { alt: "Charles facilitating a workshop session in Nairobi", caption: "Workshop facilitation — Nairobi", suggested: "/images/activities/nairobi-workshop-1.jpg" },
-      { alt: "Workshop participants in group work", caption: "Group work session — Nairobi", suggested: "/images/activities/nairobi-workshop-2.jpg" },
+      { alt: "Charles facilitating a workshop session in Nairobi", caption: "Workshop facilitation, Nairobi", suggested: "/images/activities/nairobi-workshop-1.jpg" },
+      { alt: "Workshop participants in group work", caption: "Group work session, Nairobi", suggested: "/images/activities/nairobi-workshop-2.jpg" },
     ],
     projectId: "kenya-workshop",
     enabled: true,
@@ -63,7 +63,7 @@ export const activities: Activity[] = [
   },
   {
     id: "cohort-4",
-    title: "AMR Policy & Governance Programme — Cohort 4",
+    title: "AMR Policy & Governance Programme: Cohort 4",
     date: "2026",
     sortDate: "2026-06",
     location: "Pan-African (programme reach)",
@@ -86,7 +86,7 @@ export const activities: Activity[] = [
     category: "Training",
     description: "Regional training course on antimicrobial resistance in bacterial pathogens (NICD / WCS), including an oral presentation.",
     photos: [
-      { alt: "Course participants in Johannesburg", caption: "Course cohort — Johannesburg", suggested: "/images/activities/nicd-course-group.jpg" },
+      { alt: "Course participants in Johannesburg", caption: "Course cohort, Johannesburg", suggested: "/images/activities/nicd-course-group.jpg" },
       { alt: "Charles giving an oral presentation", caption: "Oral presentation", suggested: "/images/activities/nicd-course-presentation.jpg" },
     ],
     enabled: true,
@@ -111,13 +111,13 @@ export const activities: Activity[] = [
     location: "Abuja, Nigeria",
     category: "Stakeholder engagement",
     description: "Regional review meeting where Ducit Blue Foundation presented on the role of CSOs in the AMR response.",
-    photos: [{ alt: "Regional review meeting in Abuja", caption: "Regional review — Abuja", suggested: "/images/activities/wa-regional-review.jpg" }],
+    photos: [{ alt: "Regional review meeting in Abuja", caption: "Regional review, Abuja", suggested: "/images/activities/wa-regional-review.jpg" }],
     enabled: true,
     verify: "Confirm Charles' role at the meeting.",
   },
   {
     id: "antibiotic-guardian",
-    title: "Antibiotic Guardian Award — Ducit Blue Foundation",
+    title: "Antibiotic Guardian Award: Ducit Blue Foundation",
     date: "June 2025",
     sortDate: "2025-06-09",
     location: "UK Health Security Agency (hybrid event)",
@@ -139,7 +139,7 @@ export const activities: Activity[] = [
   },
   {
     id: "cop-onboarding",
-    title: "Nigerian Youth AMR Community of Practice — onboarding & knowledge exchange",
+    title: "Nigerian Youth AMR Community of Practice: onboarding & knowledge exchange",
     date: "Ongoing",
     sortDate: "2026-09",
     location: "Nigeria",
@@ -152,7 +152,7 @@ export const activities: Activity[] = [
   },
   {
     id: "fct-pilot-engagement",
-    title: "FCT One Health / AMR pilot — stakeholder engagement",
+    title: "FCT One Health / AMR pilot: stakeholder engagement",
     date: "2026",
     sortDate: "2026-07",
     location: "Federal Capital Territory, Nigeria",
@@ -165,7 +165,7 @@ export const activities: Activity[] = [
   },
 
   /* ---------------------------------------------------------------
-   * TEMPLATE — copy, fill in, set enabled: true
+   * TEMPLATE: copy, fill in, set enabled: true
    * ---------------------------------------------------------------
   {
     id: "unique-id",

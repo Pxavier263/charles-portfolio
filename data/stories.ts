@@ -35,7 +35,7 @@ export const stories: Story[] = [
     title: "From data to decisions",
     lede: "Attendance logs, survey ratings and stakeholder notes are all evidence.",
     body:
-      "Across his work, Charles uses routine programme data — attendance and compliance records, feedback surveys and monitoring indicators — to support monitoring, reporting and programme decisions.",
+      "Across his work, Charles uses routine programme data (attendance and compliance records, feedback surveys and monitoring indicators) to support monitoring, reporting and programme decisions.",
     tags: ["data", "programme"],
   },
 ];

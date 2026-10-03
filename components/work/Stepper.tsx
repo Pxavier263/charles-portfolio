@@ -22,7 +22,7 @@ export function Stepper({ steps }: { steps: string[] }) {
               if (["ArrowDown", "ArrowRight"].includes(e.key)) { e.preventDefault(); go(k + 1); document.getElementById(`step-tab-${(k + 1) % steps.length}`)?.focus(); }
               if (["ArrowUp", "ArrowLeft"].includes(e.key)) { e.preventDefault(); go(k - 1); document.getElementById(`step-tab-${(k - 1 + steps.length) % steps.length}`)?.focus(); }
             }}
-            className={`flex flex-none items-center gap-3 rounded-xl border px-4 py-3 text-left text-sm font-semibold transition-colors ${i === k ? "is-on" : "hairline hover:border-teal-500"}`}
+            className={`flex flex-none items-center gap-3 rounded-xl border px-4 py-3 text-left text-sm font-semibold transition-colors ${i === k ? "is-on" : "hairline hover:border-orange-500"}`}
           >
             <span className="font-serif text-lg">0{k + 1}</span> Step {k + 1}
           </button>

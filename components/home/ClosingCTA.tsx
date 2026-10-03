@@ -13,13 +13,13 @@ export function ClosingCTA({ title = "Running an AMR or One Health programme? Le
     <section aria-labelledby="cta-title" className="band-ink relative overflow-hidden py-20 md:py-28">
       <div className="pointer-events-none absolute inset-0 opacity-[0.07] [background-image:radial-gradient(white_1px,transparent_1px)] [background-size:22px_22px]" aria-hidden />
       <Reveal className="container relative text-center">
-        <p className="eyebrow !text-teal-300">Work with me</p>
+        <p className="eyebrow !text-orange-300">Work with me</p>
         <h2 id="cta-title" className="mx-auto mt-4 max-w-3xl text-4xl font-medium leading-[1.08] md:text-[3.2rem]">{title}</h2>
         <p className="mx-auto mt-5 max-w-xl text-white/75">
           Tell me about your programme and what you need to know. I&apos;ll come back with how I can help.
         </p>
         <div className="mt-9 flex flex-wrap justify-center gap-3">
-          <Link href="/work-with-me" data-cta="closing" className="btn bg-teal-400 !px-6 !py-3 text-base text-ink-950 hover:bg-teal-300">
+          <Link href="/work-with-me" data-cta="closing" className="btn bg-orange-600 !px-6 !py-3 text-base text-white hover:bg-orange-700">
             Work with me <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>
           {(availability.confirmed || siteConfig.reviewMode || availability.bookingUrl) && (

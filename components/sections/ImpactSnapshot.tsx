@@ -10,7 +10,7 @@ export function ImpactSnapshot() {
       <div className="container">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="eyebrow !text-teal-300">Results in numbers</p>
+            <p className="eyebrow !text-orange-300">Results in numbers</p>
             <h2 id="snapshot-title" className="mt-2 text-2xl font-medium md:text-3xl">
               Scale I have worked at
             </h2>
@@ -23,7 +23,7 @@ export function ImpactSnapshot() {
         <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-white/10 lg:grid-cols-4">
           <Reveal className="col-span-2 tile-ink p-6 lg:row-span-2 lg:p-8">
             <div className="flex h-full flex-col justify-between gap-6">
-              <p className="font-serif text-6xl font-medium text-teal-300 md:text-7xl">
+              <p className="font-serif text-6xl font-medium text-orange-300 md:text-7xl">
                 <Counter value={lead.value} suffix={lead.suffix} />
               </p>
               <div>

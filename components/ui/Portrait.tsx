@@ -25,8 +25,8 @@ export function Portrait({ className = "aspect-[4/5]", sizes = "320px", rounded 
     );
   }
   return (
-    <div className={`relative grid place-items-center overflow-hidden bg-ink-900 text-white dark:bg-ink-800 ${className} ${rounded}`} role="img" aria-label={profile.name}>
-      <span className="font-serif text-6xl text-teal-300">{profile.initials}</span>
+    <div className={`relative grid place-items-center overflow-hidden bg-teal-700 text-white [container-type:inline-size] dark:bg-teal-800 ${className} ${rounded}`} role="img" aria-label={profile.name}>
+      <span className="font-serif text-[min(3.75rem,36cqw)] leading-none text-white">{profile.initials}</span>
     </div>
   );
 }

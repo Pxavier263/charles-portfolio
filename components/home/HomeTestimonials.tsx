@@ -2,7 +2,7 @@ import { siteConfig } from "@/data/profile";
 import { publishedTestimonials } from "@/data/testimonials";
 import { Reviews } from "../contact/Reviews";
 
-/** Homepage testimonials — renders only when published testimonials exist (or a slot in review mode). */
+/** Homepage testimonials: renders only when published testimonials exist (or a slot in review mode). */
 export function HomeTestimonials() {
   if (publishedTestimonials().length === 0 && !siteConfig.reviewMode) return null;
   return (

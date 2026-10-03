@@ -20,7 +20,7 @@ export function Presentations() {
       <ImageSlot image={sitePhotos.speaking} className="mb-8 aspect-[21/9]" sizes="(min-width: 1024px) 1200px, 100vw" />
       <ol className="grid gap-5 md:grid-cols-2">
         {list.map((p, i) => (
-          <Reveal as="li" key={p.id} delay={(i % 2) * 0.06} className={`card flex h-full min-w-0 flex-col p-6 md:p-7 ${p.status === "upcoming" ? "ring-1 ring-gold-400/60" : ""}`}>
+          <Reveal as="li" key={p.id} delay={(i % 2) * 0.06} className={`card flex h-full min-w-0 flex-col p-6 md:p-7 ${p.status === "upcoming" ? "ring-1 ring-orange-400/60" : ""}`}>
               {p.image && <ImageSlot image={p.image} className="mb-5 aspect-[16/9]" sizes="(min-width: 768px) 560px, 100vw" />}
               <div className="flex flex-wrap items-center gap-2">
                 <span className={tone[p.status]}>{p.statusLabel}</span>

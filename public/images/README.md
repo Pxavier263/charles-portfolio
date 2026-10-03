@@ -3,6 +3,7 @@
 | Folder | What goes here | Referenced from |
 |---|---|---|
 | `images/headshot.jpg` | Professional portrait (≈1000×1250 px). Appears in the hero graphic, the hero on phones, the homepage About section and the About page | `data/profile.ts` → `profile.headshot` |
+| `images/hero-portrait.png` | **Home-page hero:** the same portrait with the **background removed** (transparent PNG, ≈1000×1200 px, head-and-shoulders, under ~500 KB). The labels float around it. Make one free with remove.bg, Canva or Adobe Express "Remove background" | `data/profile.ts` → `profile.heroPortrait` |
 | `images/site/` | Page photos: working portrait, facilitating, CoP group, speaking, contact portrait, one per service | `data/photos.ts` |
 | `images/projects/<id>-cover.jpg` | One cover photo per case study (showcase cards, home showcase, top of case study) | `data/projects.ts` → `cover` |
 | `images/activities/` | Workshops, conferences, training, community sessions | `data/gallery.ts` |

@@ -10,7 +10,7 @@ import { WhoIHelp } from "@/components/home/WhoIHelp";
 import { ImpactSnapshot } from "@/components/sections/ImpactSnapshot";
 
 /**
- * Homepage — 9 sections, each with one job and one next step:
+ * Homepage: 9 sections, each with one job and one next step:
  * proposition → who I help → services → proof → numbers → process → credentials → human → ask.
  */
 export default function Home() {

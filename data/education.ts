@@ -29,13 +29,13 @@ export const education: Education[] = [
 ];
 
 /**
- * CERTIFICATIONS — every entry needs its exact name and issuer confirmed before launch.
+ * CERTIFICATIONS: every entry needs its exact name and issuer confirmed before launch.
  * Names below are the working labels from the brief, NOT verified certificate titles.
  * Set `enabled: false` for anything that cannot be confirmed.
  */
 /** Optional photos for degree certificates / licence (blur numbers before uploading). */
 export const educationImages: Record<string, { src?: string; alt: string; caption: string; suggested: string }> = {
-  msc: { alt: "Ahmadu Bello University", caption: "MSc — photo (optional)", suggested: "/images/education/abu.jpg" },
+  msc: { alt: "Ahmadu Bello University", caption: "MSc: photo (optional)", suggested: "/images/education/abu.jpg" },
   bpharm: { alt: "B.Pharm graduation", caption: "B.Pharm graduation (optional)", suggested: "/images/education/bpharm-graduation.jpg" },
   pcn: { alt: "Pharmacist licensure / induction", caption: "Licensure or induction (optional)", suggested: "/images/education/pcn-induction.jpg" },
 };

@@ -3,7 +3,7 @@ import type { Experience } from "@/lib/types";
 /**
  * EXPERIENCE TIMELINE
  * Dates are intentionally omitted: none were supplied. Add them in `period`
- * (e.g. "2023 — Present") once confirmed. Do not estimate.
+ * (e.g. "2023 – Present") once confirmed. Do not estimate.
  */
 export const experience: Experience[] = [
   {
@@ -12,7 +12,7 @@ export const experience: Experience[] = [
     organisation: "Ducit Blue Solutions / Ducit Blue Foundation",
     period: "Current",
     current: true,
-    previousTitle: "Programme Assistant — Data Analyst Expertise",
+    previousTitle: "Programme Assistant (Data Analyst Expertise)",
     summary:
       "Coordinates and monitors AMR and public-health programmes, turning programme data into reporting and decisions.",
     responsibilities: [

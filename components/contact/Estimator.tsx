@@ -27,7 +27,7 @@ export function estimate(service: string, size: Size, addOns: Record<string, num
   const base = pricing.effort[service]?.[size] ?? [0, 0];
   let low = base[0];
   let high = base[1];
-  const lines: { label: string; low: number; high: number }[] = [{ label: `${services.find((s) => s.id === service)?.title} — ${pricing.sizes.find((z) => z.id === size)?.label.toLowerCase()}`, low: base[0], high: base[1] }];
+  const lines: { label: string; low: number; high: number }[] = [{ label: `${services.find((s) => s.id === service)?.title}, ${pricing.sizes.find((z) => z.id === size)?.label.toLowerCase()}`, low: base[0], high: base[1] }];
   for (const a of pricing.addOns) {
     const n = addOns[a.id] ?? 0;
     if (!n) continue;
@@ -45,7 +45,7 @@ export function estimate(service: string, size: Size, addOns: Record<string, num
 
 /**
  * Project estimator: scope (service + size + add-ons) and timeline → indicative effort,
- * duration and — once a day rate is configured — approximate cost.
+ * duration and, once a day rate is configured, approximate cost.
  * Hidden on the live site until pricing.confirmed is true.
  */
 export function Estimator() {
@@ -82,7 +82,7 @@ export function Estimator() {
           <legend className="text-sm font-semibold">1 · What do you need?</legend>
           <div className="mt-3 grid gap-2 sm:grid-cols-2">
             {services.map((s) => (
-              <label key={s.id} className={`cursor-pointer rounded-xl border p-3.5 text-sm transition-colors has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-teal-500 ${service === s.id ? "is-on" : "hairline hover:border-teal-500"}`}>
+              <label key={s.id} className={`cursor-pointer rounded-xl border p-3.5 text-sm transition-colors has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-teal-500 ${service === s.id ? "is-on" : "hairline hover:border-orange-500"}`}>
                 <input type="radio" name="est-service" value={s.id} checked={service === s.id} onChange={() => setService(s.id)} className="sr-only" />
                 <span className="block font-semibold leading-snug">{s.title}</span>
               </label>
@@ -94,7 +94,7 @@ export function Estimator() {
           <legend className="text-sm font-semibold">2 · How big is the scope?</legend>
           <div className="mt-3 grid gap-2 sm:grid-cols-3">
             {pricing.sizes.map((z) => (
-              <label key={z.id} className={`cursor-pointer rounded-xl border p-3.5 transition-colors has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-teal-500 ${size === z.id ? "is-on" : "hairline hover:border-teal-500"}`}>
+              <label key={z.id} className={`cursor-pointer rounded-xl border p-3.5 transition-colors has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-teal-500 ${size === z.id ? "is-on" : "hairline hover:border-orange-500"}`}>
                 <input type="radio" name="est-size" value={z.id} checked={size === z.id} onChange={() => setSize(z.id)} className="sr-only" />
                 <span className="block text-sm font-semibold">{z.label}</span>
                 <span className="mt-0.5 block text-xs opacity-80">{z.hint}</span>
@@ -126,7 +126,7 @@ export function Estimator() {
           <legend className="text-sm font-semibold">4 · Timeline</legend>
           <div className="mt-3 flex flex-wrap gap-2">
             {TIMELINES.filter((t) => t.id !== "exploring").map((t) => (
-              <label key={t.id} className={`cursor-pointer rounded-full border px-4 py-2 text-sm font-medium transition-colors has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-teal-500 ${timeline === t.id ? "is-on" : "hairline hover:border-teal-500"}`}>
+              <label key={t.id} className={`cursor-pointer rounded-full border px-4 py-2 text-sm font-medium transition-colors has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-teal-500 ${timeline === t.id ? "is-on" : "hairline hover:border-orange-500"}`}>
                 <input type="radio" name="est-timeline" value={t.id} checked={timeline === t.id} onChange={() => setTimeline(t.id)} className="sr-only" />
                 {t.label}
               </label>
@@ -137,7 +137,7 @@ export function Estimator() {
 
       <div className="band-ink p-6 md:p-8">
        <div className="flex flex-col lg:sticky lg:top-24" aria-live="polite">
-        <p className="eyebrow !text-teal-300">Indicative estimate</p>
+        <p className="eyebrow !text-orange-300">Indicative estimate</p>
         {r.cost ? (
           <p className="mt-3 font-serif text-4xl leading-tight md:text-5xl">
             <AnimatedNumber value={r.cost.low} format={money} /> – <AnimatedNumber value={r.cost.high} format={money} />
@@ -167,7 +167,7 @@ export function Estimator() {
           <p className="mt-4 rounded-lg bg-white/10 p-3 text-xs text-white/80">Set <code>pricing.dayRate</code> in data/conversion.ts to show an approximate cost in {pricing.currency}.</p>
         )}
         <p className="mt-4 text-xs text-white/60">{pricing.disclaimer}</p>
-        <button type="button" onClick={apply} data-cta="estimate-use" className="btn mt-6 w-full bg-teal-400 !py-3 text-base text-ink-950 hover:bg-teal-300">
+        <button type="button" onClick={apply} data-cta="estimate-use" className="btn mt-6 w-full bg-orange-600 !py-3 text-base text-white hover:bg-orange-700">
           Use this estimate in my enquiry <ArrowRight className="h-4 w-4" aria-hidden />
         </button>
        </div>

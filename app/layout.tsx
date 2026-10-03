@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     firstName: "Charles",
     lastName: "Ogu",
     // Static share image so it works on every host (replace public/og.png with your own 1200×630 image anytime)
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: `${profile.name} — public-health impact portfolio` }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: `${profile.name}: public-health impact portfolio` }],
   },
   twitter: { card: "summary_large_image", title: SEO.title, description: SEO.description, images: ["/og.png"] },
   robots: { index: !siteConfig.reviewMode, follow: true },
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f7f5f0" },
-    { media: "(prefers-color-scheme: dark)", color: "#070d1c" },
+    { media: "(prefers-color-scheme: light)", color: "#F7F9F9" },
+    { media: "(prefers-color-scheme: dark)", color: "#091A1F" },
   ],
 };
 

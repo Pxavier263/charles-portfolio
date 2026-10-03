@@ -30,7 +30,7 @@ export function Recognition() {
                 {a.recipientType === "organisation" && show(a.recipient) && <p className="mt-3 text-sm"><span className="font-semibold">Recipient:</span> {a.recipient}</p>}
                 <p className="mt-3 text-sm leading-relaxed muted">{a.description}</p>
                 {a.sourceUrl && (
-                  <a href={a.sourceUrl} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold underline decoration-teal-500 underline-offset-4">
+                  <a href={a.sourceUrl} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold underline decoration-orange-500 underline-offset-4">
                     View official announcement <ExternalLink className="h-3.5 w-3.5" aria-hidden /><span className="sr-only">(opens in a new tab)</span>
                   </a>
                 )}

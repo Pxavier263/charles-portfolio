@@ -8,7 +8,7 @@ import type { Achievement } from "@/lib/types";
 export const achievements: Achievement[] = [
   {
     id: "antibiotic-guardian-2025",
-    title: "2025 Antibiotic Guardian Award — Winner, Multi-Country Collaboration category",
+    title: "2025 Antibiotic Guardian Award: Winner, Multi-Country Collaboration category",
     awardingBody: "Antibiotic Guardian campaign, UK Health Security Agency",
     date: "June 2025",
     recipient: "Ducit Blue Foundation",
@@ -18,7 +18,7 @@ export const achievements: Achievement[] = [
     enabled: true,
     sourceUrl: "https://antibioticguardian.com/ag-awards-winners-2025/",
     tags: ["amr", "one-health", "youth", "capacity"],
-    image: { alt: "Antibiotic Guardian Award 2025", caption: "Award — Antibiotic Guardian 2025", suggested: "/images/awards/antibiotic-guardian-2025.jpg" },
+    image: { alt: "Antibiotic Guardian Award 2025", caption: "Award: Antibiotic Guardian 2025", suggested: "/images/awards/antibiotic-guardian-2025.jpg" },
   },
   {
     id: "trinity-2025",
@@ -30,7 +30,7 @@ export const achievements: Achievement[] = [
     description: "Recognition certificate presented during the Trinity Challenge workshop in Abuja.",
     enabled: true,
     tags: ["data", "research"],
-    image: { alt: "Best Digital Innovative Solution certificate", caption: "Certificate — Trinity Challenge 2025", suggested: "/images/awards/trinity-challenge-2025.jpg" },
+    image: { alt: "Best Digital Innovative Solution certificate", caption: "Certificate: Trinity Challenge 2025", suggested: "/images/awards/trinity-challenge-2025.jpg" },
     verify: "Confirm whether the recognition was to Charles individually or to a team, and the solution's name.",
   },
   {
@@ -44,7 +44,7 @@ export const achievements: Achievement[] = [
     /** Set to false to hide this entry if it cannot be confirmed. */
     enabled: true,
     tags: ["amr", "research"],
-    image: { alt: "Oral presentation recognition", caption: "Recognition — NICD/WCS course", suggested: "/images/awards/nicd-oral-2026.jpg" },
+    image: { alt: "Oral presentation recognition", caption: "Recognition: NICD/WCS course", suggested: "/images/awards/nicd-oral-2026.jpg" },
     verify: "Confirm exact wording of the recognition (e.g. 'Best Oral Presentation') and supporting evidence.",
   },
 ];

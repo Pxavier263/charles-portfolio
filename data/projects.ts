@@ -44,7 +44,7 @@ export const copWorkingGroups = [
 export const projects: Project[] = [
   {
     id: "cohort-4",
-    cover: { alt: "Cohort 4 participants and mentors", caption: "Cohort 4 — cover photo", suggested: "/images/projects/cohort-4-cover.jpg" },
+    cover: { alt: "Cohort 4 participants and mentors", caption: "Cohort 4 cover photo", suggested: "/images/projects/cohort-4-cover.jpg" },
     type: "Capacity-building programme",
     sectors: ["Global health & AMR", "One Health", "Education & youth development"],
     skills: ["Programme coordination", "M&E", "Data management", "Stakeholder engagement", "Assessment coordination", "Reporting"],
@@ -58,20 +58,20 @@ export const projects: Project[] = [
     headline: { value: "25 · 14", label: "interns · countries" },
     reflection: [
       "Routine attendance and compliance monitoring made it possible to follow participation across ≈40 sessions rather than relying on end-of-programme recall.",
-      "Post-programme impact survey results will show which capstone ideas moved into practice — the next step in measuring impact.",
+      "Post-programme impact survey results will show which capstone ideas moved into practice. This is the next step in measuring impact.",
     ],
     related: ["youth-cop", "sustainability-toolkit"],
-    title: "AMR Policy & Governance Programme for African Youth — Cohort 4",
+    title: "AMR Policy & Governance Programme for African Youth (Cohort 4)",
     shortTitle: "Pan-African Youth AMR Programme · Cohort 4",
     year: "2026",
     status: "completed",
     featured: true,
     organisations: ["Ducit Blue Foundation", "One Health Society"],
-    scope: "Pan-African — participants from 14 countries (programme reach)",
+    scope: "Pan-African: participants from 14 countries (programme reach)",
     summary:
       "A 10-week policy and governance programme equipping young African professionals to analyse and act on antimicrobial resistance through a One Health lens.",
     challenge:
-      "AMR governance across Africa needs a pipeline of young professionals who understand policy, coordination and implementation — not only the science of resistance. Opportunities for structured, multidisciplinary exposure to real governance problems remain limited.",
+      "AMR governance across Africa needs a pipeline of young professionals who understand policy, coordination and implementation, not only the science of resistance. Opportunities for structured, multidisciplinary exposure to real governance problems remain limited.",
     role: [
       "Programme coordination",
       "Data management and programme monitoring",
@@ -84,7 +84,7 @@ export const projects: Project[] = [
     approach: [
       "Structured weekly learning sessions delivered by technical experts from multiple sectors",
       "One-to-one and group mentorship across the 10 weeks",
-      "Applied capstone: the AMR Youth Governance Innovation Dossier — governance diagnostics, a policy translation product, an implementation plan and a pitch presentation",
+      "Applied capstone: the AMR Youth Governance Innovation Dossier, comprising governance diagnostics, a policy translation product, an implementation plan and a pitch presentation",
       "Routine monitoring of attendance and compliance to support participant completion",
     ],
     collaborators: ["Ducit Blue Foundation", "One Health Society", "Programme mentors and technical experts"],
@@ -120,7 +120,7 @@ export const projects: Project[] = [
   },
   {
     id: "sustainability-toolkit",
-    cover: { alt: "Sustainability toolkit workshop participants", caption: "Toolkit work — cover photo", suggested: "/images/projects/sustainability-toolkit-cover.jpg" },
+    cover: { alt: "Sustainability toolkit workshop participants", caption: "Toolkit work cover photo", suggested: "/images/projects/sustainability-toolkit-cover.jpg" },
     type: "Evaluation & analysis",
     sectors: ["Global health & AMR", "International development"],
     skills: ["Data analysis", "Survey analysis", "Thematic synthesis", "Facilitation", "Sustainability planning"],
@@ -136,7 +136,7 @@ export const projects: Project[] = [
       "Workshop usefulness was rated 100% in both countries, suggesting facilitated sessions help teams apply the tools.",
     ],
     related: ["kenya-workshop", "cohort-4"],
-    title: "Sustainable Impact & AMR Toolkit — Ghana and Kenya",
+    title: "Sustainable Impact & AMR Toolkit: Ghana and Kenya",
     shortTitle: "Sustainability Toolkit · Ghana & Kenya",
     year: "2025",
     status: "completed",
@@ -174,7 +174,7 @@ export const projects: Project[] = [
   },
   {
     id: "kenya-workshop",
-    cover: { alt: "Workshop session in Nairobi", caption: "Nairobi workshop — cover photo", suggested: "/images/projects/kenya-workshop-cover.jpg" },
+    cover: { alt: "Workshop session in Nairobi", caption: "Nairobi workshop cover photo", suggested: "/images/projects/kenya-workshop-cover.jpg" },
     type: "Workshop & facilitation",
     sectors: ["Global health & AMR", "International development"],
     skills: ["Facilitation", "Sustainability planning", "Prioritisation"],
@@ -195,8 +195,8 @@ export const projects: Project[] = [
       "Facilitated prioritisation of sustainability recommendations",
     ],
     collaborators: [TBC],
-    outputs: ["Prioritised sustainability recommendations", `Workshop report — ${TBC}`],
-    impact: [`Outcomes and follow-up actions — ${TBC}`],
+    outputs: ["Prioritised sustainability recommendations", `Workshop report: ${TBC}`],
+    impact: [`Outcomes and follow-up actions: ${TBC}`],
     methods: ["Facilitation", "Participatory prioritisation"],
     facts: [
       { label: "Dates", value: "24, 25 & 28 Aug 2026" },
@@ -212,7 +212,7 @@ export const projects: Project[] = [
   },
   {
     id: "fct-pilot",
-    cover: { alt: "FCT One Health pilot stakeholder meeting", caption: "FCT pilot — cover photo", suggested: "/images/projects/fct-pilot-cover.jpg" },
+    cover: { alt: "FCT One Health pilot stakeholder meeting", caption: "FCT pilot cover photo", suggested: "/images/projects/fct-pilot-cover.jpg" },
     type: "Pilot design",
     sectors: ["One Health", "Environmental health", "Global health & AMR"],
     skills: ["Stakeholder engagement", "M&E design", "Risk assessment design"],
@@ -233,7 +233,7 @@ export const projects: Project[] = [
       "A proposed pilot to bring frontline-led One Health risk assessment and prioritisation to AMR and environmental-health challenges in the FCT.",
     challenge:
       "Local AMR and environmental-health risks are often assessed far from the people who see them daily. Frontline insight is rarely fed into structured prioritisation and monitoring.",
-    role: [`Contribution to design and stakeholder engagement — ${TBC}`],
+    role: [`Contribution to design and stakeholder engagement: ${TBC}`],
     approach: [
       "Frontline-led risk assessment and prioritisation",
       "Stakeholder engagement across health, environment and AMR coordination actors",
@@ -259,7 +259,7 @@ export const projects: Project[] = [
   },
   {
     id: "youth-cop",
-    cover: { alt: "Nigerian Youth AMR Community of Practice members", caption: "Community of Practice — cover photo", suggested: "/images/projects/youth-cop-cover.jpg" },
+    cover: { alt: "Nigerian Youth AMR Community of Practice members", caption: "Community of Practice cover photo", suggested: "/images/projects/youth-cop-cover.jpg" },
     type: "Network leadership",
     sectors: ["Global health & AMR", "Education & youth development", "One Health"],
     skills: ["Network leadership", "Partnerships", "Advocacy", "Facilitation", "Strategic planning"],
@@ -277,7 +277,7 @@ export const projects: Project[] = [
     status: "ongoing",
     featured: true,
     organisations: ["Nigerian Youth AMR Community of Practice"],
-    scope: "Nigeria — national network",
+    scope: "Nigeria: national network",
     summary:
       "A national youth network of 500+ members supporting youth engagement in the response to antimicrobial resistance.",
     challenge:
@@ -289,7 +289,7 @@ export const projects: Project[] = [
       "AMR awareness and youth advocacy using a One Health approach",
       "Collaboration discussions with national stakeholders",
     ],
-    collaborators: [`National AMR / One Health stakeholders — ${TBC}`],
+    collaborators: [`National AMR / One Health stakeholders: ${TBC}`],
     outputs: ["National onboarding sessions", "Knowledge-exchange activities", "AMR awareness activities"],
     impact: ["500+ active members in a national youth AMR network"],
     methods: ["Network coordination", "Facilitation", "Advocacy", "Partnership development"],

@@ -123,7 +123,7 @@ export function Activities() {
                       </button>
                     )}
                     {a.projectId && (
-                      <a href={withBase(`/work/${a.projectId}`)} className="text-xs font-semibold underline decoration-teal-500 underline-offset-4">
+                      <a href={withBase(`/work/${a.projectId}`)} className="text-xs font-semibold underline decoration-orange-500 underline-offset-4">
                         Case study<span className="sr-only">: {a.title}</span>
                       </a>
                     )}

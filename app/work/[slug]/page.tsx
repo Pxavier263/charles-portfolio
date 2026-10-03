@@ -59,7 +59,7 @@ export default function CaseStudy({ params }: { params: { slug: string } }) {
       <header className="band-canvas relative overflow-hidden pb-12 pt-28 md:pt-36">
         <div className="pointer-events-none absolute inset-0 grain opacity-50 [mask-image:linear-gradient(to_bottom,black,transparent)]" aria-hidden />
         <div className="container relative">
-          <Link href="/work" className="inline-flex items-center gap-1.5 text-sm font-semibold hover:text-teal-700 dark:hover:text-teal-300">
+          <Link href="/work" className="inline-flex items-center gap-1.5 text-sm font-semibold hover:text-orange-700 dark:hover:text-orange-300">
             <ArrowLeft className="h-4 w-4" aria-hidden /> All work
           </Link>
           <Reveal>
@@ -77,7 +77,7 @@ export default function CaseStudy({ params }: { params: { slug: string } }) {
           {/* 1 · Snapshot bar */}
           <dl className="mt-10 grid gap-px overflow-hidden rounded-2xl border hairline bg-[rgb(var(--line)/0.08)] sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { k: "Organisations", v: orgs.join(" · ") || "—" },
+              { k: "Organisations", v: orgs.join(" · ") || "Not listed" },
               { k: "My role", v: visible(p.role).slice(0, 2).join(" · ") },
               { k: "Where", v: p.scope },
               { k: "Headline", v: p.headline ? `${p.headline.value} ${p.headline.label}` : statusLabel },
@@ -162,7 +162,7 @@ export default function CaseStudy({ params }: { params: { slug: string } }) {
               <>
                 <h3 className="mt-8 font-sans text-sm font-semibold">Outputs</h3>
                 <ul className="mt-2 space-y-1.5 text-sm muted">
-                  {visible(p.outputs).map((o) => <li key={o}>— {o}</li>)}
+                  {visible(p.outputs).map((o) => <li key={o} className="flex gap-2.5"><span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-[rgb(var(--accent))]" aria-hidden /><span>{o}</span></li>)}
                 </ul>
               </>
             )}
@@ -220,12 +220,12 @@ export default function CaseStudy({ params }: { params: { slug: string } }) {
         <div className="container grid items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
           <div>
             <h2 id="case-cta-t" className="text-3xl font-medium leading-tight md:text-5xl">Running something similar? Let&apos;s talk.</h2>
-            <Link href="/work-with-me" data-cta={`case-${p.id}`} className="btn mt-8 bg-teal-400 !px-6 !py-3 text-base text-ink-950 hover:bg-teal-300">
+            <Link href="/work-with-me" data-cta={`case-${p.id}`} className="btn mt-8 bg-orange-600 !px-6 !py-3 text-base text-white hover:bg-orange-700">
               Work with me <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
           </div>
           <div className="space-y-3">
-            <Link href={`/work/${next.id}`} className="group block rounded-2xl border border-white/15 p-5 transition-colors hover:border-teal-300">
+            <Link href={`/work/${next.id}`} className="group block rounded-2xl border border-white/15 p-5 transition-colors hover:border-orange-300">
               <span className="text-xs uppercase tracking-eyebrow text-white/60">Next case study</span>
               <span className="mt-1 flex items-center justify-between gap-3 font-serif text-xl">
                 {next.shortTitle} <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden />

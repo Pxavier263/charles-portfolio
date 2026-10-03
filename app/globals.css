@@ -3,58 +3,64 @@
 @tailwind utilities;
 
 /* ------------------------------------------------------------------
- * COLOUR SYSTEM — one palette, used everywhere.
- *   Navy  (brand)     #0B1530  identity, dark bands, text
- *   Teal  (accent)    #0F6454 / #127D67 / #35B99B  actions, links, data
- *   Gold  (highlight) #B8963F  sparing highlights only
- *   Warm neutrals     #F7F5F0 canvas · #F1EEE7 tint · #FFFFFF surface
+ * COLOUR SYSTEM: Deep Teal + Burnt Orange (modern health)
+ *   Primary  Deep Teal     #0F4C5C  headers, navigation, links, dark bands
+ *   Accent   Burnt Orange  #E36414  buttons, highlights
+ *   Background             #F7F9F9
+ *   Body text              #1B2A2F
+ * Buttons with white text use #C2530F, one shade deeper than #E36414,
+ * so the text meets the WCAG AA contrast standard (4.5:1).
  * Change a value here and the whole site follows.
  * ------------------------------------------------------------------ */
 :root {
   --font-sans: "Inter Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-serif: "Fraunces Variable", Georgia, serif;
 
-  --bg: 247 245 240;          /* canvas band */
-  --tint: 241 238 231;        /* alternate band */
-  --accent-wash: 233 244 240; /* soft teal band (philosophy) */
-  --ink: 11 21 48;            /* dark navy band */
+  --bg: 247 249 249;          /* #F7F9F9 page background */
+  --tint: 238 243 244;        /* #EEF3F4 alternate band */
+  --accent-wash: 234 243 245; /* #EAF3F5 soft teal band */
+  --ink: 15 76 92;            /* #0F4C5C deep teal band */
   --surface: 255 255 255;     /* cards */
-  --text: 11 21 48;
-  --muted: 71 82 110;
-  --line: 11 21 48;
+  --text: 27 42 47;           /* #1B2A2F body text */
+  --muted: 74 97 104;         /* #4A6168 secondary text */
+  --line: 27 42 47;
 
-  --accent: 18 125 103;       /* teal-600 */
-  --accent-strong: 15 100 84; /* teal-700: buttons, links (AA on white) */
-  --accent-soft: 207 242 232; /* teal-100 */
-  --highlight: 184 150 63;    /* gold-500 */
-  --highlight-text: 107 85 34;/* gold-700 */
-  --slate: 90 110 168;        /* muted blue for a 3rd data series / training */
+  --primary: 15 76 92;        /* #0F4C5C deep teal */
+  --heading: 15 76 92;        /* headings in deep teal */
+  --accent: 227 100 20;       /* #E36414 burnt orange: highlights, markers */
+  --accent-strong: 194 83 15; /* #C2530F burnt orange for white-text buttons */
+  --accent-soft: 251 221 200; /* #FBDDC8 */
+  --highlight: 227 100 20;    /* #E36414 */
+  --highlight-text: 150 64 11;/* #96400B orange text on light backgrounds */
+  --slate: 74 154 173;        /* #4A9AAD light teal, 3rd data series */
 
   /* selection / active filter state */
-  --on-bg: 11 21 48;
+  --on-bg: 15 76 92;
   --on-text: 255 255 255;
   color-scheme: light;
 }
 
 .dark {
-  --bg: 7 13 28;
-  --tint: 10 19 40;
-  --accent-wash: 8 29 33;
-  --ink: 4 9 20;
-  --surface: 13 23 48;
-  --text: 236 240 247;
-  --muted: 160 172 196;
-  --line: 236 240 247;
+  --bg: 9 26 31;              /* #091A1F */
+  --tint: 12 33 39;           /* #0C2127 */
+  --accent-wash: 11 38 45;    /* #0B262D */
+  --ink: 6 19 23;             /* #061317 */
+  --surface: 15 40 48;        /* #0F2830 */
+  --text: 234 241 242;
+  --muted: 157 181 187;
+  --line: 234 241 242;
 
-  --accent: 53 185 155;
-  --accent-strong: 111 211 187;
-  --accent-soft: 16 60 55;
-  --highlight: 214 182 100;
-  --highlight-text: 230 207 143;
-  --slate: 140 160 214;
+  --primary: 125 184 198;
+  --heading: 234 241 242;
+  --accent: 236 130 64;       /* #EC8240 */
+  --accent-strong: 236 130 64;
+  --accent-soft: 70 35 14;
+  --highlight: 236 130 64;
+  --highlight-text: 243 167 116;
+  --slate: 125 184 198;
 
-  --on-bg: 53 185 155;
-  --on-text: 7 13 28;
+  --on-bg: 125 184 198;
+  --on-text: 9 26 31;
   color-scheme: dark;
 }
 
@@ -72,13 +78,16 @@
   }
   h1, h2, h3 {
     @apply font-serif tracking-tight;
+    color: rgb(var(--heading));
     font-variation-settings: "opsz" 96;
     text-wrap: balance;
   }
   p { text-wrap: pretty; }
-  ::selection { @apply bg-teal-100 text-ink-900; }
+  /* Headings on dark bands keep the band's white text */
+  .band-ink :is(h1, h2, h3), .tile-ink :is(h1, h2, h3), .text-white :is(h1, h2, h3) { color: inherit; }
+  ::selection { @apply bg-orange-100 text-ink-900; }
   :focus-visible {
-    @apply outline-none ring-2 ring-teal-500 ring-offset-2 ring-offset-[rgb(var(--bg))] rounded-md;
+    @apply outline-none ring-2 ring-orange-500 ring-offset-2 ring-offset-[rgb(var(--bg))] rounded-md;
   }
 }
 
@@ -98,20 +107,20 @@
   .btn {
     @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-200 motion-reduce:transition-none;
   }
-  /* One primary action colour everywhere (teal), one secondary (outline). */
+  /* One primary action colour everywhere (burnt orange), one secondary (outline). */
   .btn-primary {
-    @apply btn bg-teal-700 text-white shadow-soft hover:bg-teal-800 dark:bg-teal-400 dark:text-ink-950 dark:hover:bg-teal-300;
+    @apply btn bg-orange-600 text-white shadow-soft hover:bg-orange-700 dark:bg-orange-500 dark:text-ink-950 dark:hover:bg-orange-400;
   }
   .btn-accent { @apply btn-primary; }
   .btn-ghost {
-    @apply btn border hairline bg-[rgb(var(--surface)/0.6)] hover:border-teal-500 hover:text-teal-700 dark:hover:text-teal-300;
+    @apply btn border hairline bg-[rgb(var(--surface)/0.6)] hover:border-orange-500 hover:text-orange-700 dark:hover:text-orange-300;
   }
-  /* Button on a dark navy band */
+  /* Button on a dark teal band */
   .btn-on-ink {
-    @apply btn border border-white/25 text-white hover:border-teal-300 hover:text-teal-300;
+    @apply btn border border-white/25 text-white hover:border-orange-300 hover:text-orange-300;
   }
 
-  /* Section bands — the only four backgrounds used for sections */
+  /* Section bands: the only four backgrounds used for sections */
   .band-canvas { background: rgb(var(--bg)); }
   .band-tint { background: rgb(var(--tint)); }
   .band-accent { background: rgb(var(--accent-wash)); }
@@ -123,12 +132,12 @@
     background: rgb(var(--on-bg)); color: rgb(var(--on-text)); border-color: rgb(var(--on-bg)) !important;
   }
 
-  /* Status pills — same four meanings across projects, presentations and activities */
+  /* Status pills: same four meanings across projects, presentations and activities */
   .pill { @apply inline-flex items-center rounded-full px-2.5 py-1 text-[0.7rem] font-semibold; }
   .pill-done { @apply pill bg-teal-50 text-teal-800 dark:bg-teal-400/15 dark:text-teal-300; }
   .pill-live { @apply pill bg-ink-900/[0.06] text-ink-700 dark:bg-white/10 dark:text-white/85; }
-  .pill-plan { @apply pill bg-gold-300/30 text-gold-700 dark:bg-gold-400/15 dark:text-gold-300; }
-  .pill-next { @apply pill bg-gold-400 text-ink-950; }
+  .pill-plan { @apply pill bg-orange-300/30 text-orange-700 dark:bg-orange-400/15 dark:text-orange-300; }
+  .pill-next { @apply pill bg-orange-400 text-ink-950; }
   .chip {
     @apply inline-flex items-center rounded-full border hairline px-3 py-1 text-xs font-medium;
   }

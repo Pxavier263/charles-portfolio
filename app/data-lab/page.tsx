@@ -17,7 +17,7 @@ const slots = [
   { icon: PieChart, title: "Monitoring dashboards", text: "Indicator tracking for programme teams." },
 ];
 
-/** Layout placeholders only — no data is shown and nothing here represents real results. */
+/** Layout placeholders only: no data is shown and nothing here represents real results. */
 function DemoSkeleton({ i }: { i: number }) {
   const heights = [40, 65, 50, 80, 55, 70, 45];
   return (
@@ -41,14 +41,14 @@ function DemoSkeleton({ i }: { i: number }) {
 export default function DataLab() {
   return (
     <div className="container pb-24 pt-32">
-      <Link href="/" className="inline-flex items-center gap-2 text-sm font-semibold hover:text-teal-700 dark:hover:text-teal-300">
+      <Link href="/" className="inline-flex items-center gap-2 text-sm font-semibold hover:text-orange-700 dark:hover:text-orange-300">
         <ArrowLeft className="h-4 w-4" aria-hidden /> Back to portfolio
       </Link>
       <p className="eyebrow mt-10">Data Lab</p>
       <h1 className="mt-3 max-w-3xl text-4xl font-medium leading-tight md:text-5xl">Where programme data becomes something people can use.</h1>
       <p className="mt-5 max-w-2xl text-lg muted">
         This space will showcase dashboards, analyses and maps as they are cleared for public sharing. The panels below are
-        layout previews only — they contain no data and do not represent real results.
+        layout previews only. They contain no data and do not represent real results.
       </p>
       <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {slots.map((s, i) => (
@@ -65,7 +65,7 @@ export default function DataLab() {
       </ul>
       <p className="mt-10 text-sm muted">
         Adding a real dashboard: publish it (e.g. Power BI “Publish to web” only for non-sensitive, approved data), then add an entry
-        with its embed URL — see README → “Data Lab”.
+        with its embed URL (see README → “Data Lab”).
       </p>
     </div>
   );

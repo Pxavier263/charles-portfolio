@@ -15,10 +15,10 @@ export function Footer() {
         <nav aria-label="Footer">
           <ul className="grid grid-cols-2 gap-2 text-sm">
             {NAV.footer.map((l) => (
-              <li key={l.label}><Link href={l.href} className="hover:text-teal-700 hover:underline dark:hover:text-teal-300">{l.label}</Link></li>
+              <li key={l.label}><Link href={l.href} className="hover:text-orange-700 hover:underline dark:hover:text-orange-300">{l.label}</Link></li>
             ))}
             <li>
-              <ExternalOrPlaceholder href={profile.links.linkedin} label="LinkedIn profile" className="hover:text-teal-700 hover:underline dark:hover:text-teal-300">LinkedIn</ExternalOrPlaceholder>
+              <ExternalOrPlaceholder href={profile.links.linkedin} label="LinkedIn profile" className="hover:text-orange-700 hover:underline dark:hover:text-orange-300">LinkedIn</ExternalOrPlaceholder>
             </li>
           </ul>
         </nav>

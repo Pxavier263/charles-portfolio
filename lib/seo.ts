@@ -1,9 +1,9 @@
 import { bio, profile, siteConfig } from "@/data/profile";
 
 export const SEO = {
-  title: `${profile.name} — AMR & One Health M&E, Data and Programme Consultant`,
+  title: `${profile.name} | AMR & One Health M&E, Data and Programme Consultant`,
   description:
-    "Pharm. Ogu Charles Chukwudi (Charles Ogu) helps African AMR and One Health programmes prove and sustain their impact — M&E, programme data analysis, sustainability facilitation and youth capacity building. Based in Abuja, Nigeria.",
+    "Pharm. Ogu Charles Chukwudi (Charles Ogu) helps African AMR and One Health programmes prove and sustain their impact through M&E, programme data analysis, sustainability facilitation and youth capacity building. Based in Abuja, Nigeria.",
   keywords: [
     "Ogu Charles Chukwudi",
     "Charles Ogu",
@@ -19,7 +19,7 @@ export const SEO = {
   ],
 };
 
-/** schema.org Person — only confirmed facts; sameAs is populated from supplied links only. */
+/** schema.org Person: only confirmed facts; sameAs is populated from supplied links only. */
 export function personJsonLd() {
   const sameAs = Object.values(profile.links).filter(Boolean);
   return {

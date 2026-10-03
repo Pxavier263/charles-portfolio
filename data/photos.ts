@@ -1,7 +1,7 @@
 import type { ImagePlaceholder } from "@/lib/types";
 
 /**
- * SITE PHOTOS — every page-level photo slot in one place.
+ * SITE PHOTOS: every page-level photo slot in one place.
  * ------------------------------------------------------------------
  * 1. Save the photo at the `suggested` path (under /public).
  * 2. Copy that path into `src` (without "public"), e.g. src: "/images/site/speaking.jpg".
@@ -14,7 +14,7 @@ import type { ImagePlaceholder } from "@/lib/types";
 export const sitePhotos = {
   /** Hero (mobile) + portrait crops use the headshot from profile.ts. */
   workingPortrait: {
-    alt: "Charles at work — facilitating or presenting",
+    alt: "Charles at work, facilitating or presenting",
     caption: "Working portrait (you in action)",
     suggested: "/images/site/working-portrait.jpg",
   },

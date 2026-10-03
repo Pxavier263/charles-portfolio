@@ -27,7 +27,7 @@ export default function ServicesPage() {
       >
         <nav aria-label="Services on this page" className="flex flex-wrap gap-2">
           {services.map((s) => (
-            <a key={s.id} href={`#${s.id}`} className="chip !py-1.5 hover:border-teal-500">{s.title}</a>
+            <a key={s.id} href={`#${s.id}`} className="chip !py-1.5 hover:border-orange-500">{s.title}</a>
           ))}
         </nav>
       </PageHeader>
@@ -63,7 +63,7 @@ export default function ServicesPage() {
                   <p className="mt-2 text-sm leading-relaxed">{s.proof}</p>
                   <ul className="mt-4 flex flex-wrap gap-2">
                     {proof.map((p) => (
-                      <li key={p.id}><Link href={`/work/${p.id}`} className="chip !py-1.5 hover:border-teal-500">{p.shortTitle} →</Link></li>
+                      <li key={p.id}><Link href={`/work/${p.id}`} className="chip !py-1.5 hover:border-orange-500">{p.shortTitle} →</Link></li>
                     ))}
                   </ul>
                 </div>

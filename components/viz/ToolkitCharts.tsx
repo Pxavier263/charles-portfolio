@@ -26,7 +26,7 @@ export function ToolkitCharts() {
   return (
     <figure>
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="eyebrow">2025 feedback — Ghana vs Kenya</p>
+        <p className="eyebrow">2025 feedback: Ghana vs Kenya</p>
         <div role="group" aria-label="Show country" className="inline-flex rounded-full border hairline p-1">
           {opts.map((o) => (
             <button
@@ -36,7 +36,7 @@ export function ToolkitCharts() {
               onClick={() => setView(o.id)}
               className={`flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold transition-colors ${view === o.id ? "is-on" : ""}`}
             >
-              {o.id !== "both" && <span className={`h-2 w-2 rounded-full ${o.id === "ghana" ? "bg-teal-600" : "bg-gold-500"}`} aria-hidden />}
+              {o.id !== "both" && <span className={`h-2 w-2 rounded-full ${o.id === "ghana" ? "bg-teal-600" : "bg-orange-500"}`} aria-hidden />}
               {o.label}
             </button>
           ))}
@@ -50,7 +50,7 @@ export function ToolkitCharts() {
             <p className="mt-1 font-serif text-3xl">{view === "both" ? n(b).total : n(b)[view]}</p>
             <div className="mt-2 flex h-2 overflow-hidden rounded-full" aria-hidden>
               <div className={`bg-teal-600 transition-opacity ${view === "kenya" ? "opacity-20" : ""}`} style={{ width: `${(n(b).ghana / n(b).total) * 100}%` }} />
-              <div className={`bg-gold-500 transition-opacity ${view === "ghana" ? "opacity-20" : ""}`} style={{ width: `${(n(b).kenya / n(b).total) * 100}%` }} />
+              <div className={`bg-orange-500 transition-opacity ${view === "ghana" ? "opacity-20" : ""}`} style={{ width: `${(n(b).kenya / n(b).total) * 100}%` }} />
             </div>
             <p className="mt-2 text-xs muted">Ghana {n(b).ghana} · Kenya {n(b).kenya}</p>
           </div>
@@ -65,7 +65,7 @@ export function ToolkitCharts() {
             </p>
             <div className="mt-2 space-y-1.5">
               <Bar value={r.ghana} className="bg-teal-600" label="Ghana" dim={view === "kenya"} />
-              <Bar value={r.kenya} className="bg-gold-500" label="Kenya" dim={view === "ghana"} />
+              <Bar value={r.kenya} className="bg-orange-500" label="Kenya" dim={view === "ghana"} />
             </div>
           </div>
         ))}

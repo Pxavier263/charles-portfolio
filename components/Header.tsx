@@ -43,14 +43,14 @@ export function Header() {
           Skip to content
         </a>
         <nav className="container flex h-16 items-center justify-between gap-4" aria-label="Primary">
-          <Link href="/" className="flex items-center gap-2.5" aria-label={`${profile.name} — home`}>
-            <span className="grid h-9 w-9 place-items-center rounded-full bg-ink-900 font-serif text-sm text-white dark:bg-teal-400 dark:text-ink-950">
+          <Link href="/" className="flex items-center gap-2.5" aria-label={`${profile.name}, home`}>
+            <span className="grid h-9 w-9 place-items-center rounded-full bg-teal-700 font-serif text-sm text-white dark:bg-teal-400 dark:text-ink-950">
               {profile.initials}
             </span>
-            <span className="hidden font-serif text-[1.05rem] font-medium sm:block">{profile.name}</span>
+            <span className="hidden whitespace-nowrap font-serif text-[1.05rem] font-medium sm:block">{profile.name}</span>
           </Link>
 
-          <ul className="hidden items-center gap-1 md:flex">
+          <ul className="hidden items-center gap-1 lg:flex">
             {NAV.primary.map((item) => {
               const active = isActive(path, item.href);
               return (
@@ -58,8 +58,8 @@ export function Header() {
                   <Link
                     href={item.href}
                     aria-current={active ? "page" : undefined}
-                    className={`relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors hover:text-teal-700 dark:hover:text-teal-300 ${
-                      active ? "text-teal-700 dark:text-teal-300" : ""
+                    className={`relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors hover:text-orange-700 dark:hover:text-orange-300 ${
+                      active ? "text-teal-700 dark:text-teal-300" : "text-teal-800 dark:text-white/85"
                     }`}
                   >
                     {item.label}
@@ -72,12 +72,12 @@ export function Header() {
 
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <Link href={NAV.cta.href} data-cta="header" className="btn-primary hidden !py-2 sm:inline-flex" aria-current={onCtaPage ? "page" : undefined}>
+            <Link href={NAV.cta.href} data-cta="header" className="btn-primary hidden whitespace-nowrap !py-2 sm:inline-flex" aria-current={onCtaPage ? "page" : undefined}>
               {NAV.cta.label} <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
             <button
               type="button"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border hairline md:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border hairline lg:hidden"
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
               aria-controls="mobile-menu"
@@ -89,7 +89,7 @@ export function Header() {
         </nav>
 
         {mobileOpen && (
-          <div id="mobile-menu" className="fixed inset-x-0 bottom-0 top-16 overflow-y-auto bg-[rgb(var(--bg))] md:hidden">
+          <div id="mobile-menu" className="fixed inset-x-0 bottom-0 top-16 overflow-y-auto bg-[rgb(var(--bg))] lg:hidden">
             <div className="container flex min-h-full flex-col py-8">
               <ul className="space-y-1">
                 {[{ label: "Home", href: "/" }, ...NAV.primary].map((item) => (

@@ -7,7 +7,7 @@ import { pushHistory, readHistory, recommend, type Recommendation } from "@/lib/
 import { track } from "@/lib/track";
 
 /**
- * "You might also like" — ranks other case studies by shared skills, sectors, type and
+ * "You might also like": ranks other case studies by shared skills, sectors, type and
  * explicit links, boosted by what the visitor viewed earlier (stored only in their browser).
  * Each card says why it was recommended.
  */
@@ -44,7 +44,7 @@ export function Recommendations({ currentId, title = "You might also like" }: { 
                 <span className="text-xs font-semibold uppercase tracking-wider muted">{r.project.type}</span>
                 <ArrowUpRight className="h-5 w-5 flex-none text-teal-700 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 dark:text-teal-300" aria-hidden />
               </div>
-              <h3 className="mt-3 text-lg font-medium leading-snug group-hover:text-teal-700 dark:group-hover:text-teal-300">{r.project.shortTitle}</h3>
+              <h3 className="mt-3 text-lg font-medium leading-snug group-hover:text-orange-700 dark:group-hover:text-orange-300">{r.project.shortTitle}</h3>
               <ul className="mt-auto flex flex-wrap gap-1.5 pt-5" aria-label="Why recommended">
                 {r.reasons.slice(0, 2).map((x) => (
                   <li key={x} className="rounded-full bg-[rgb(var(--accent-wash))] px-2.5 py-1 text-[0.7rem] font-medium text-teal-800 dark:text-teal-300">{x}</li>

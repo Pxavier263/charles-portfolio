@@ -41,7 +41,7 @@ export default function AboutPage() {
       <nav aria-label="On this page" className="sticky top-16 z-30 border-b hairline bg-[rgb(var(--bg)/0.9)] backdrop-blur-md">
         <ul className="container flex gap-1 overflow-x-auto py-2.5 text-sm">
           {JUMP.map(([label, href]) => (
-            <li key={href}><a href={href} className="block whitespace-nowrap rounded-full px-3 py-1.5 font-medium hover:bg-[rgb(var(--tint))] hover:text-teal-700 dark:hover:text-teal-300">{label}</a></li>
+            <li key={href}><a href={href} className="block whitespace-nowrap rounded-full px-3 py-1.5 font-medium hover:bg-[rgb(var(--tint))] hover:text-orange-700 dark:hover:text-orange-300">{label}</a></li>
           ))}
         </ul>
       </nav>

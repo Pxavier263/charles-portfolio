@@ -39,7 +39,7 @@ export function ServicesGrid() {
                   <Link href={`/work-with-me?service=${s.id}`} data-cta={`service-${s.id}`} className="btn-primary !py-2">
                     Ask about this <span className="sr-only">service: {s.title}</span>
                   </Link>
-                  <Link href={`/services#${s.id}`} className="inline-flex items-center gap-1 text-sm font-semibold underline decoration-teal-500 underline-offset-4">
+                  <Link href={`/services#${s.id}`} className="inline-flex items-center gap-1 text-sm font-semibold underline decoration-orange-500 underline-offset-4">
                     Details<span className="sr-only">: {s.title}</span> <ArrowRight className="h-3.5 w-3.5" aria-hidden />
                   </Link>
                 </div>

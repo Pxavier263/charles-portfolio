@@ -37,7 +37,7 @@ function Facet({ label, options, value, onChange }: { label: string; options: st
             type="button"
             aria-pressed={value === o}
             onClick={() => onChange(value === o ? "" : o)}
-            className={`rounded-full border px-3.5 py-1.5 text-sm font-medium transition ${value === o ? "is-on" : "hairline hover:border-teal-500"}`}
+            className={`rounded-full border px-3.5 py-1.5 text-sm font-medium transition ${value === o ? "is-on" : "hairline hover:border-orange-500"}`}
           >
             {o} <span className="ml-1 text-xs opacity-60">{count(o)}</span>
           </button>
@@ -70,7 +70,7 @@ function Card({ p, layout, open, onToggle }: { p: Project; layout: "grid" | "lis
             <span className="text-xs font-semibold uppercase tracking-wider muted">{p.type}</span>
           </div>
           <h2 className="mt-3 text-xl font-medium leading-snug md:text-2xl">
-            <Link href={`/work/${p.id}`} className="hover:text-teal-700 dark:hover:text-teal-300">{p.title}</Link>
+            <Link href={`/work/${p.id}`} className="hover:text-orange-700 dark:hover:text-orange-300">{p.title}</Link>
           </h2>
           <p className="mt-1 text-sm muted">{p.year} · {p.scope}</p>
           <p className="mt-3 leading-relaxed muted">{p.summary}</p>
@@ -104,7 +104,7 @@ function Card({ p, layout, open, onToggle }: { p: Project; layout: "grid" | "lis
               </div>
               <div>
                 <p className="eyebrow">What I did</p>
-                <ul className="mt-2 space-y-1 text-sm">{visible(p.role).map((r) => <li key={r}>— {r}</li>)}</ul>
+                <ul className="mt-2 space-y-1 text-sm">{visible(p.role).map((r) => <li key={r} className="flex gap-2.5"><span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-[rgb(var(--accent))]" aria-hidden /><span>{r}</span></li>)}</ul>
               </div>
               <div>
                 {p.beforeAfter ? (
@@ -190,13 +190,13 @@ export function Showcase() {
               value={f.q}
               onChange={(e) => set("q")(e.target.value)}
               placeholder="Search by keyword, skill or country…"
-              className="w-full rounded-full border hairline bg-[rgb(var(--bg))] py-3 pl-11 pr-4 text-sm focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500/30"
+              className="w-full rounded-full border hairline bg-[rgb(var(--bg))] py-3 pl-11 pr-4 text-sm focus:border-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500/30"
             />
           </label>
           <div className="flex items-center gap-3">
             <label className="flex items-center gap-2 text-sm">
               <span className="font-semibold">Skill</span>
-              <select value={f.skill} onChange={(e) => set("skill")(e.target.value)} className="rounded-full border hairline bg-[rgb(var(--bg))] px-4 py-2.5 text-sm focus:border-teal-500 focus:outline-none">
+              <select value={f.skill} onChange={(e) => set("skill")(e.target.value)} className="rounded-full border hairline bg-[rgb(var(--bg))] px-4 py-2.5 text-sm focus:border-teal-700 focus:outline-none">
                 <option value="">Any skill</option>
                 {ALL_SKILLS.map((s) => <option key={s}>{s}</option>)}
               </select>
@@ -218,7 +218,7 @@ export function Showcase() {
           <span className="font-semibold">{list.length}</span> of {projects.length} case studies
         </p>
         {active > 0 && (
-          <button type="button" onClick={() => setF(EMPTY)} className="inline-flex items-center gap-1 text-sm font-semibold underline decoration-teal-500 underline-offset-4">
+          <button type="button" onClick={() => setF(EMPTY)} className="inline-flex items-center gap-1 text-sm font-semibold underline decoration-orange-500 underline-offset-4">
             <X className="h-3.5 w-3.5" aria-hidden /> Clear {active} filter{active > 1 ? "s" : ""}
           </button>
         )}
@@ -237,7 +237,7 @@ export function Showcase() {
       {list.length === 0 && (
         <div className="mt-4 rounded-2xl border border-dashed hairline p-10 text-center">
           <p className="font-serif text-2xl">No case studies match those filters.</p>
-          <p className="mt-2 muted">Try removing a filter — or tell me about your project directly.</p>
+          <p className="mt-2 muted">Try removing a filter, or tell me about your project directly.</p>
           <div className="mt-6 flex justify-center gap-3">
             <button type="button" onClick={() => setF(EMPTY)} className="btn-ghost">Clear filters</button>
             <Link href="/work-with-me" data-cta="work-empty" className="btn-primary">Work with me <ArrowRight className="h-4 w-4" aria-hidden /></Link>

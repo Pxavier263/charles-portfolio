@@ -29,7 +29,7 @@ export const footprint: FootprintLocation[] = [
     lon: -0.19,
     types: ["Project Delivery"],
     inPerson: null,
-    activities: ["Sustainable Impact & AMR Toolkit — implementation and feedback analysis (2025)"],
+    activities: ["Sustainable Impact & AMR Toolkit: implementation and feedback analysis (2025)"],
     verify: "Confirm whether work in Ghana was in person or remote.",
   },
   {
@@ -41,7 +41,7 @@ export const footprint: FootprintLocation[] = [
     types: ["Project Delivery", "Training"],
     inPerson: true,
     activities: [
-      "Kenya Sustainable Impact & AMR Workshop (Aug 2026) — attended and facilitated",
+      "Kenya Sustainable Impact & AMR Workshop (Aug 2026): attended and facilitated",
       "Sustainable Impact & AMR Toolkit feedback (2025)",
       "Science Day discussions and ICARS Africa launch",
     ],
@@ -65,7 +65,7 @@ export const footprint: FootprintLocation[] = [
     lon: 31.03,
     types: ["Conference"],
     inPerson: null,
-    activities: ["CPHIA 2025 — participation and abstract/session presentation"],
+    activities: ["CPHIA 2025: participation and abstract/session presentation"],
     verify: "Confirm in-person vs virtual participation.",
   },
   {
@@ -77,7 +77,7 @@ export const footprint: FootprintLocation[] = [
     types: ["Conference", "Presentation"],
     inPerson: null,
     upcoming: true,
-    activities: ["ICID 2026 — accepted poster (10–13 November 2026)"],
+    activities: ["ICID 2026: accepted poster (10–13 November 2026)"],
   },
 ];
 

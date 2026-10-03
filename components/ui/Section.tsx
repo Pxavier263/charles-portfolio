@@ -17,7 +17,7 @@ export function Section({ id, eyebrow, title, intro, children, className = "", t
     <section id={id} aria-labelledby={`${id}-title`} className={`py-20 md:py-28 ${toneClass} ${className}`}>
       <div className="container">
         <Reveal className="max-w-3xl">
-          <p className={`eyebrow ${tone === "ink" ? "!text-teal-300" : ""}`}>{eyebrow}</p>
+          <p className={`eyebrow ${tone === "ink" ? "!text-orange-300" : ""}`}>{eyebrow}</p>
           <h2 id={`${id}-title`} className="mt-3 text-3xl md:text-[2.6rem] leading-[1.1] font-medium">
             {title}
           </h2>

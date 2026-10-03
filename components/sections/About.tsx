@@ -17,7 +17,7 @@ export function About() {
     <Section
       id="about"
       eyebrow="About"
-      title={<>Data, programmes, policy and people — <em className="text-teal-700 dark:text-teal-300">in one practice.</em></>}
+      title={<>Data, programmes, policy and people, <em className="text-orange-600 dark:text-orange-400">in one practice.</em></>}
       intro={profile.centralMessage}
     >
       <div className="grid gap-12 lg:grid-cols-[320px_1fr]">

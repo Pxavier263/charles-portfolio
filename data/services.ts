@@ -1,7 +1,7 @@
 import type { Tag } from "@/lib/types";
 
 /**
- * SERVICES, AUDIENCES, PROCESS & FAQ — the "hire me" content.
+ * SERVICES, AUDIENCES, PROCESS & FAQ: the "hire me" content.
  * Every service links to proof (projectIds). Edit freely; no prices are shown on the site.
  */
 
@@ -32,7 +32,7 @@ export const audiences: Audience[] = [
   {
     id: "ngos",
     title: "NGOs & programme teams",
-    problem: "You're running an AMR or One Health programme and need to show what it is achieving — and keep it going after funding ends.",
+    problem: "You're running an AMR or One Health programme and need to show what it is achieving, and keep it going after funding ends.",
     help: "Monitoring frameworks, feedback analysis and sustainability planning.",
     serviceId: "me",
   },
@@ -67,7 +67,7 @@ export const services: Service[] = [
   {
     id: "me",
     title: "Monitoring, evaluation & impact measurement",
-    short: "Know what your programme is achieving — and be able to show it.",
+    short: "Know what your programme is achieving, and be able to show it.",
     outcome: "A monitoring approach your team can run, and evidence your funders can trust.",
     deliverables: [
       "Indicator frameworks and monitoring plans",
@@ -85,7 +85,7 @@ export const services: Service[] = [
     short: "Turn surveys and programme records into clear decisions.",
     outcome: "Findings, charts and dashboards that decision-makers actually read.",
     deliverables: [
-      "Survey analysis — quantitative and qualitative thematic",
+      "Survey analysis (quantitative and qualitative thematic)",
       "Power BI dashboards",
       "Geospatial mapping (QGIS)",
       "Data-quality checks and cleaning (Python, SQL, SPSS, Excel)",
@@ -127,7 +127,7 @@ export const services: Service[] = [
 ];
 
 export const formats = [
-  { title: "Advisory call", text: "A focused review — e.g. an M&E framework, a survey tool or an evaluation plan." },
+  { title: "Advisory call", text: "A focused review of an M&E framework, a survey tool or an evaluation plan." },
   { title: "Fixed-scope project", text: "An evaluation, a dashboard, or a feedback analysis with a clear deliverable." },
   { title: "Facilitation days", text: "Workshops, validation meetings and prioritisation sessions." },
   { title: "Ongoing support", text: "Regular M&E and data support alongside your team." },
@@ -136,7 +136,7 @@ export const formats = [
 export const process = [
   { step: "Understand", text: "A short call to understand your programme, data and decision." },
   { step: "Design", text: "A scoped proposal: approach, deliverables and timeline." },
-  { step: "Deliver", text: "Analysis, tools or facilitation — shared early and iterated with your team." },
+  { step: "Deliver", text: "Analysis, tools or facilitation, shared early and iterated with your team." },
   { step: "Measure", text: "Evidence of what changed, and a handover your team can keep using." },
 ];
 
@@ -164,7 +164,7 @@ export const faqs = [
   },
   {
     q: "Are you open to full-time or contract roles?",
-    a: "Yes — I'm open to selected roles in AMR, One Health, programme management and M&E. Download my CV or get in touch.",
+    a: "Yes. I'm open to selected roles in AMR, One Health, programme management and M&E. Download my CV or get in touch.",
   },
   {
     q: "Can you work remotely?",

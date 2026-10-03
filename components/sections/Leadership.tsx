@@ -37,7 +37,7 @@ export function Leadership() {
               "One Health engagement",
               "Collaboration discussions with national stakeholders",
             ].map((x) => (
-              <li key={x} className="flex gap-2 text-sm"><span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-gold-500" aria-hidden />{x}</li>
+              <li key={x} className="flex gap-2 text-sm"><span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-orange-500" aria-hidden />{x}</li>
             ))}
           </ul>
           <h3 className="mt-8 font-sans text-sm font-semibold">Charles&apos; leadership focus</h3>

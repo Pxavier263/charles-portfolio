@@ -7,25 +7,40 @@ const config: Config = {
     container: { center: true, padding: { DEFAULT: "1.25rem", md: "2rem" }, screens: { "2xl": "1240px" } },
     extend: {
       colors: {
+        /* Body text and dark neutrals (body text = #1B2A2F) */
         ink: {
-          950: "#070d1c",
-          900: "#0b1530",
-          800: "#12204a",
-          700: "#1c2d5e",
-          600: "#2d4079",
+          950: "#0B1A1F",
+          900: "#1B2A2F",
+          800: "#24373D",
+          700: "#33494F",
+          600: "#4A6168",
         },
-        paper: { DEFAULT: "#f7f5f0", 50: "#fbfaf7", 100: "#f2efe8", 200: "#e6e1d6" },
+        /* Cool background neutrals (page background = #F7F9F9) */
+        paper: { DEFAULT: "#F7F9F9", 50: "#FBFCFC", 100: "#EEF3F4", 200: "#DFE7E9" },
+        /* PRIMARY: Deep Teal (headers, nav, links) = teal-700 #0F4C5C */
         teal: {
-          50: "#ecfaf6",
-          100: "#cff2e8",
-          300: "#6fd3bb",
-          400: "#35b99b",
-          500: "#1a9c80",
-          600: "#127d67",
-          700: "#0f6454",
-          800: "#0d4f43",
+          50: "#EAF3F5",
+          100: "#D2E6EA",
+          200: "#A9CFD8",
+          300: "#7DB8C6",
+          400: "#4A9AAD",
+          500: "#23798E",
+          600: "#155F71",
+          700: "#0F4C5C",
+          800: "#0B3C49",
+          900: "#082E38",
         },
-        gold: { 300: "#e6cf8f", 400: "#d6b664", 500: "#b8963f", 600: "#8f7330", 700: "#6b5522" },
+        /* ACCENT: Burnt Orange (buttons, highlights) = orange-500 #E36414 */
+        orange: {
+          50: "#FDF1E9",
+          100: "#FBDDC8",
+          300: "#F3A774",
+          400: "#EC8240",
+          500: "#E36414",
+          600: "#C2530F",
+          700: "#96400B",
+          800: "#6E2F08",
+        },
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
@@ -33,8 +48,8 @@ const config: Config = {
       },
       letterSpacing: { eyebrow: "0.18em" },
       boxShadow: {
-        soft: "0 1px 2px rgba(11,21,48,.04), 0 8px 24px -12px rgba(11,21,48,.12)",
-        lift: "0 2px 4px rgba(11,21,48,.05), 0 24px 48px -20px rgba(11,21,48,.25)",
+        soft: "0 1px 2px rgba(27,42,47,.04), 0 8px 24px -12px rgba(27,42,47,.12)",
+        lift: "0 2px 4px rgba(27,42,47,.05), 0 24px 48px -20px rgba(27,42,47,.25)",
       },
     },
   },

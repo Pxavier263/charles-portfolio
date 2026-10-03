@@ -123,7 +123,7 @@ export interface Project extends Verifiable {
   tags: Tag[];
   pillars: PillarId[];
   media: ImagePlaceholder[];
-  /** Cover photo — shown on showcase cards and at the top of the case study. */
+  /** Cover photo: shown on showcase cards and at the top of the case study. */
   cover?: ImagePlaceholder;
   /** Optional visual rendered inside the case study */
   visual?: "pipeline" | "toolkit-charts" | "network" | "pilot-roadmap" | "workshop-agenda";
@@ -132,13 +132,13 @@ export interface Project extends Verifiable {
   homeOrder?: number;
   /** Credit line for the organisation that led the work. */
   credit?: string;
-  /** "What I learned / would do next" — only evidence-based observations. */
+  /** "What I learned / would do next": only evidence-based observations. */
   reflection?: string[];
   /** One headline figure shown on hover/preview cards. */
   headline?: { value: string; label: string };
   /** Related case studies (ids). */
   related?: string[];
-  /** Showcase taxonomy — values come from data/taxonomy.ts */
+  /** Showcase taxonomy: values come from data/taxonomy.ts */
   type: ProjectType;
   sectors: Sector[];
   skills: string[];
@@ -194,7 +194,7 @@ export interface Achievement extends Verifiable {
   awardingBody: string;
   date: string;
   recipient: string;
-  /** Distinguishes organisational awards from personal ones — important for accuracy */
+  /** Distinguishes organisational awards from personal ones: important for accuracy */
   recipientType: "organisation" | "individual" | "team" | "to-confirm";
   /** Photo of the award, certificate or ceremony */
   image?: ImagePlaceholder;
@@ -216,7 +216,7 @@ export interface Education extends Verifiable {
 
 export interface Certification extends Verifiable {
   id: string;
-  /** Name exactly as it appears on the certificate — do not paraphrase */
+  /** Name exactly as it appears on the certificate: do not paraphrase */
   name: string;
   issuer: string;
   year?: string;
