@@ -1,4 +1,4 @@
-import type { Certification, Education } from "@/lib/types";
+import type { Certification, Education, ImagePlaceholder } from "@/lib/types";
 
 export const education: Education[] = [
   {
@@ -7,7 +7,6 @@ export const education: Education[] = [
     institution: "Ahmadu Bello University",
     period: "In progress · expected 2026",
     status: "in-progress",
-    verify: "Confirm degree title (MSc vs MPH) and expected completion.",
   },
   {
     id: "bpharm",
@@ -16,7 +15,6 @@ export const education: Education[] = [
     period: "2018",
     status: "completed",
     detail: "CGPA 3.44 / 4.0",
-    verify: "Confirm CGPA grading scale.",
   },
   {
     id: "pcn",
@@ -34,10 +32,10 @@ export const education: Education[] = [
  * Set `enabled: false` for anything that cannot be confirmed.
  */
 /** Optional photos for degree certificates / licence (blur numbers before uploading). */
-export const educationImages: Record<string, { src?: string; alt: string; caption: string; suggested: string }> = {
-  msc: { alt: "Ahmadu Bello University", caption: "MSc: photo (optional)", suggested: "/images/education/abu.jpg" },
-  bpharm: { alt: "B.Pharm graduation", caption: "B.Pharm graduation (optional)", suggested: "/images/education/bpharm-graduation.jpg" },
-  pcn: { alt: "Pharmacist licensure / induction", caption: "Licensure or induction (optional)", suggested: "/images/education/pcn-induction.jpg" },
+export const educationImages: Record<string, ImagePlaceholder> = {
+  msc: { alt: "Ahmadu Bello University", caption: "MSc: Practicum session", src: "/images/education/abu.jpg" },
+  bpharm: { alt: "B.Pharm graduation", caption: "B.Pharm graduation", src: "/images/education/bpharm-graduation.jpg" },
+  pcn: { alt: "Pharmacist licensure / induction", caption: "Licensure or induction", src: "/images/education/pcn-induction.jpg" },
 };
 
 export const certifications: Certification[] = [
@@ -73,5 +71,37 @@ export const certifications: Certification[] = [
     enabled: true,
     verify:
       "Confirm exact title and issuer. Only use 'Project Management Professional (PMP)' if the PMI credential is held.",
+  },
+  {
+    id: "cert-5",
+    name: "[DETAIL TO BE CONFIRMED]",
+    issuer: "[DETAIL TO BE CONFIRMED]",
+    image: { alt: "Certificate image", caption: "Certificate image", suggested: "/images/certificates/cert-5.jpg" },
+    enabled: true,
+    verify: "Add exact certificate title, issuer, year and credential link.",
+  },
+  {
+    id: "cert-6",
+    name: "[DETAIL TO BE CONFIRMED]",
+    issuer: "[DETAIL TO BE CONFIRMED]",
+    image: { alt: "Certificate image", caption: "Certificate image", suggested: "/images/certificates/cert-6.jpg" },
+    enabled: true,
+    verify: "Add exact certificate title, issuer, year and credential link.",
+  },
+  {
+    id: "cert-7",
+    name: "[DETAIL TO BE CONFIRMED]",
+    issuer: "[DETAIL TO BE CONFIRMED]",
+    image: { alt: "Certificate image", caption: "Certificate image", suggested: "/images/certificates/cert-7.jpg" },
+    enabled: true,
+    verify: "Add exact certificate title, issuer, year and credential link.",
+  },
+  {
+    id: "cert-8",
+    name: "[DETAIL TO BE CONFIRMED]",
+    issuer: "[DETAIL TO BE CONFIRMED]",
+    image: { alt: "Certificate image", caption: "Certificate image", suggested: "/images/certificates/cert-8.jpg" },
+    enabled: true,
+    verify: "Add exact certificate title, issuer, year and credential link.",
   },
 ];

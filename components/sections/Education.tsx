@@ -11,7 +11,7 @@ const icon = { completed: GraduationCap, "in-progress": GraduationCap, active: B
 const statusText = { completed: "Completed", "in-progress": "In progress", active: "Active" };
 
 export function Education() {
-  const certs = certifications.filter((c) => c.enabled);
+  const certs = certifications.filter((c) => c.enabled && show(c.name));
   return (
     <Section id="education" eyebrow="Education & training" title="Qualifications">
       <div className="grid gap-5 md:grid-cols-3">

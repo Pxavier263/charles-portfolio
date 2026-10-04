@@ -44,7 +44,7 @@ export const copWorkingGroups = [
 export const projects: Project[] = [
   {
     id: "cohort-4",
-    cover: { alt: "Cohort 4 participants and mentors", caption: "Cohort 4 cover photo", suggested: "/images/projects/cohort-4-cover.jpg" },
+    cover: { alt: "Cohort 4 participants and mentors", caption: "Cohort 4 cover photo", src: "/images/projects/cohort-4-cover.jpg" },
     type: "Capacity-building programme",
     sectors: ["Global health & AMR", "One Health", "Education & youth development"],
     skills: ["Programme coordination", "M&E", "Data management", "Stakeholder engagement", "Assessment coordination", "Reporting"],
@@ -174,7 +174,7 @@ export const projects: Project[] = [
   },
   {
     id: "kenya-workshop",
-    cover: { alt: "Workshop session in Nairobi", caption: "Nairobi workshop cover photo", suggested: "/images/projects/kenya-workshop-cover.jpg" },
+    cover: { alt: "Workshop session in Nairobi", caption: "Nairobi workshop cover photo", src: "/images/projects/kenya-workshop-cover.jpg" },
     type: "Workshop & facilitation",
     sectors: ["Global health & AMR", "International development"],
     skills: ["Facilitation", "Sustainability planning", "Prioritisation"],
@@ -212,7 +212,7 @@ export const projects: Project[] = [
   },
   {
     id: "fct-pilot",
-    cover: { alt: "FCT One Health pilot stakeholder meeting", caption: "FCT pilot cover photo", suggested: "/images/projects/fct-pilot-cover.jpg" },
+    cover: { alt: "FCT One Health pilot stakeholder meeting", caption: "FCT pilot cover photo", src: "/images/projects/fct-pilot-cover.jpg" },
     type: "Pilot design",
     sectors: ["One Health", "Environmental health", "Global health & AMR"],
     skills: ["Stakeholder engagement", "M&E design", "Risk assessment design"],

@@ -16,17 +16,17 @@ export const sitePhotos = {
   workingPortrait: {
     alt: "Charles at work, facilitating or presenting",
     caption: "Working portrait (you in action)",
-    suggested: "/images/site/working-portrait.jpg",
+    src: "/images/site/working-portrait.jpg",
   },
   howIWork: {
     alt: "Charles facilitating a workshop session",
     caption: "Facilitating a workshop",
-    suggested: "/images/site/facilitating.jpg",
+    src: "/images/site/facilitating.jpg",
   },
   leadership: {
     alt: "Members of the Nigerian Youth AMR Community of Practice",
     caption: "Community of Practice members / session",
-    suggested: "/images/site/cop-group.jpg",
+    src: "/images/site/cop-group.jpg",
   },
   speaking: {
     alt: "Charles presenting at a conference",
@@ -39,9 +39,9 @@ export const sitePhotos = {
     suggested: "/images/site/contact-portrait.jpg",
   },
   services: {
-    me: { alt: "Reviewing programme monitoring data", caption: "M&E / monitoring work", suggested: "/images/site/service-me.jpg" },
-    data: { alt: "Working on a data dashboard", caption: "Data analysis / dashboards", suggested: "/images/site/service-data.jpg" },
-    sustainability: { alt: "Sustainability planning workshop", caption: "Sustainability workshop", suggested: "/images/site/service-sustainability.jpg" },
-    youth: { alt: "Mentoring young professionals", caption: "Youth programme / mentoring", suggested: "/images/site/service-youth.jpg" },
+    me: { alt: "Reviewing programme monitoring data", caption: "M&E / monitoring work", src: "/images/site/service-me.jpg" },
+    data: { alt: "Working on a data dashboard", caption: "Data analysis / dashboards", src: "/images/site/service-data.jpg" },
+    sustainability: { alt: "Sustainability planning workshop", caption: "Sustainability workshop", src: "/images/site/service-sustainability.jpg" },
+    youth: { alt: "Mentoring young professionals", caption: "Youth programme / mentoring", src: "/images/site/service-youth.jpg" },
   } as Record<string, ImagePlaceholder>,
 } satisfies Record<string, ImagePlaceholder | Record<string, ImagePlaceholder>>;
