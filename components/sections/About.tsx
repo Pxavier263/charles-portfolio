@@ -9,7 +9,7 @@ const facts = [
   { icon: Briefcase, label: "Programme & Data Officer", sub: "Ducit Blue Solutions / Foundation" },
   { icon: Users, label: "Chairman / Lead", sub: "Nigerian Youth AMR Community of Practice" },
   { icon: BadgeCheck, label: "Licensed pharmacist", sub: "Pharmacists Council of Nigeria" },
-  { icon: GraduationCap, label: "B.Pharm · MSc Public Health (in progress)", sub: "UniPort · Ahmadu Bello University" },
+  { icon: GraduationCap, label: "B.Pharm · MSc Public Health (in progress)", sub: "University of Port Harcourt · Ahmadu Bello University" },
 ];
 
 export function About() {
