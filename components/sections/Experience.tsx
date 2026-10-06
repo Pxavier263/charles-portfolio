@@ -14,7 +14,7 @@ export function Experience() {
               aria-hidden
             />
             <p className="text-xs font-semibold uppercase tracking-wider text-teal-700 dark:text-teal-300 md:absolute md:-left-[11.5rem] md:top-1 md:w-36 md:text-right">
-              {e.current ? "Current" : e.period.startsWith("[") ? "Earlier role" : e.period}
+              {e.period.startsWith("[") ? (e.current ? "Current" : "Earlier role") : e.period}
             </p>
             <Reveal delay={i * 0.05}>
               <article className="card mt-2 p-6 md:mt-0 md:p-7">

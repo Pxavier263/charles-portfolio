@@ -10,9 +10,9 @@ export const experience: Experience[] = [
     id: "dbf",
     role: "Programme & Data Officer",
     organisation: "Ducit Blue Solutions / Ducit Blue Foundation",
-    period: "Current",
+    period: "Nov 2025 – Present",
     current: true,
-    previousTitle: "Programme Assistant (Data Analyst Expertise)",
+    previousTitle: "Programme Assistant (Data Analyst Expertise), promoted 1 November 2025",
     summary:
       "Coordinates and monitors AMR and public-health programmes, turning programme data into reporting and decisions.",
     responsibilities: [
@@ -27,7 +27,6 @@ export const experience: Experience[] = [
       "Research support",
     ],
     tags: ["programme", "data", "amr", "one-health", "research", "sustainability"],
-    verify: "Add start date and date of promotion from Programme Assistant.",
   },
   {
     id: "cop",
@@ -43,14 +42,14 @@ export const experience: Experience[] = [
       "National stakeholder engagement",
       "Strategic planning",
       "Advocacy",
+      "Bioinformatics and data analysis support",
     ],
     tags: ["youth", "amr", "policy", "one-health", "capacity"],
-    verify: "Add start date of the role.",
   },
   {
     id: "thet",
     role: "Administrative Assistant",
-    organisation: "THET In-Country Coordinator",
+    organisation: "Global Health Partnership (formerly THET) In-Country Coordinator",
     period: "[DETAIL TO BE CONFIRMED]",
     summary: "Supported the In-Country Coordinator with administration, coordination and documentation.",
     responsibilities: [
@@ -61,7 +60,5 @@ export const experience: Experience[] = [
       "Documentation",
     ],
     tags: ["programme", "amr", "capacity"],
-    verify:
-      "Confirm exact title and employer wording (e.g. whether the role was with THET or with a consultant serving as THET In-Country Coordinator), and dates.",
   },
 ];

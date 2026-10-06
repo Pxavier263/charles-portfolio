@@ -68,15 +68,15 @@ export const pricing = {
 /* ---------------- Consultation availability (calendar) ---------------- */
 export const availability = {
   /** Set true once these hours are your real consultation hours. */
-  confirmed: false,
+  confirmed: true,
   /** Your time zone (IANA). */
   timeZone: "Africa/Lagos",
   timeZoneLabel: "WAT",
   slotMinutes: 30,
-  /** Weekly consultation slots in YOUR time zone. 1 = Monday … 5 = Friday. PLACEHOLDERS. */
+  /** Weekly consultation slots in YOUR time zone. 1 = Monday … 6 = Saturday, 0 = Sunday. */
   weekly: {
-    2: ["10:00", "11:00", "15:00"],
-    4: ["10:00", "14:00", "16:00"],
+    // Saturdays, 9am–4pm WAT: 30-minute slots, last one starts 15:30
+    6: ["09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30"],
   } as Record<number, string[]>,
   /** How far ahead visitors can pick, and the minimum notice. */
   daysAhead: 21,
