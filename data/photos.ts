@@ -31,7 +31,7 @@ export const sitePhotos = {
   speaking: {
     alt: "Charles presenting at a conference",
     caption: "Presenting at a conference",
-    suggested: "/images/site/speaking.jpg",
+    src: "/images/site/speaking.jpg",
   },
   contact: {
     alt: "Portrait of Charles, smiling",

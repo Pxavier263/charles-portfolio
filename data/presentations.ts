@@ -20,8 +20,7 @@ export const presentations: Presentation[] = [
     description:
       "Accepted poster presenting the structured internship and mentorship model used to build Pan-African youth capacity for One Health AMR action.",
     tags: ["amr", "one-health", "youth", "capacity", "research"],
-    image: { alt: "Poster presentation at ICID 2026", caption: "ICID 2026 poster", suggested: "/images/presentations/icid-2026-poster.jpg" },
-    verify: "Confirm author list and whether Charles is presenting author.",
+    image: { alt: "Poster presentation at ICID 2026", caption: "ICID 2026 poster", src: "/images/presentations/icid-2026-poster.jpg" },
   },
   {
     id: "nicd-course-2026",
@@ -36,8 +35,28 @@ export const presentations: Presentation[] = [
     description:
       "Participated in an intensive regional course on antimicrobial resistance in bacterial pathogens, including an oral presentation.",
     tags: ["amr", "research", "capacity"],
-    image: { alt: "Oral presentation during the NICD/WCS course", caption: "NICD/WCS course: oral presentation", suggested: "/images/presentations/nicd-course-2026.jpg" },
-    verify: "Confirm the WCS expansion (Wellcome Connecting Science) and the oral presentation title.",
+    image: { alt: "Oral presentation during the NICD/WCS course", caption: "NICD/WCS course", src: "/images/presentations/nicd-course-2026.jpg" },
+  },
+  {
+    id: "wcs-genomic-amr-2026",
+    event: "Genomic Surveillance of AMR across the Human-Animal-Environmental Interface Symposium",
+    organiser: "Wellcome Connecting Science",
+    location: "Johannesburg, South Africa",
+    date: "6–7 March 2026",
+    sortDate: "2026-03-06",
+    kind: "Poster",
+    title:
+      "Leveraging a digital AMR engagement platform to strengthen community awareness and generate behavioural insights relevant to antimicrobial resistance surveillance in Nigeria",
+    status: "delivered",
+    statusLabel: "Poster presented",
+    description:
+      "Presented a poster on how a digital AMR engagement platform can raise community awareness in Nigeria and generate behavioural insights that inform AMR surveillance.",
+    tags: ["amr", "one-health", "research"],
+    image: {
+      alt: "Charles presenting his poster at the Genomic Surveillance of AMR Symposium, Johannesburg",
+      caption: "Genomic Surveillance of AMR Symposium: poster presentation",
+      src: "/images/presentations/wcs-genomic-amr-2026.jpg",
+    },
   },
   {
     id: "cphia-2025",
@@ -47,14 +66,12 @@ export const presentations: Presentation[] = [
     date: "22–25 October 2025",
     sortDate: "2025-10-22",
     kind: "Conference participation",
-    title: "[DETAIL TO BE CONFIRMED]",
+    title: "Tackling Antimicrobial Resistance (AMR) Across Borders Through Mentorship and Capacity Building",
     status: "delivered",
-    statusLabel: "Participant · Abstract / session presentation",
-    description: "Participated in CPHIA 2025 and presented an abstract/session contribution.",
+    statusLabel: "Abstract presented",
+    description: "Presented an abstract on tackling AMR across borders through mentorship and capacity building.",
     tags: ["amr", "one-health", "research"],
-    image: { alt: "Charles at CPHIA 2025", caption: "CPHIA 2025", suggested: "/images/presentations/cphia-2025.jpg" },
-    verify:
-      "Brief said 'December 2025'; Africa CDC lists CPHIA 2025 as 22–25 Oct 2025 in Durban. Confirm, and add abstract title and presentation format.",
+    image: { alt: "Charles at CPHIA 2025", caption: "CPHIA 2025", src: "/images/presentations/cphia-2025.jpg" },
   },
   {
     id: "wa-review-2025",
@@ -69,7 +86,6 @@ export const presentations: Presentation[] = [
     description:
       "Ducit Blue Foundation presented on the role of civil-society organisations in the AMR response. Charles' specific involvement is to be confirmed.",
     tags: ["amr", "policy"],
-    image: { alt: "Regional review meeting, Abuja", caption: "West Africa regional review", suggested: "/images/presentations/wa-review-2025.jpg" },
-    verify: "Confirm organiser and Charles' role (presenter, co-author, preparation support, or attendee).",
+    image: { alt: "Regional review meeting, Abuja", caption: "West Africa regional review", src: "/images/presentations/wa-review-2025.jpg" },
   },
 ];

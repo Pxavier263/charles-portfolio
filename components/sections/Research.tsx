@@ -1,5 +1,5 @@
 "use client";
-import { FileText } from "lucide-react";
+import { ExternalLink, FileText } from "lucide-react";
 import { useState } from "react";
 import { EMPTY_PUBLICATIONS_MESSAGE, publicationCategories, publications } from "@/data/publications";
 import type { PublicationCategory } from "@/lib/types";
@@ -47,9 +47,20 @@ export function Research() {
                     <FileText className="mt-1 h-5 w-5 flex-none text-teal-600 dark:text-teal-300" aria-hidden />
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-wider muted">{p.category} · {p.status}</p>
-                      <p className="mt-1 font-serif text-lg leading-snug">{p.url ? <a href={withBase(p.url)} className="hover:underline">{p.title}</a> : p.title}</p>
+                      <p className="mt-1 font-serif text-lg leading-snug">{p.url ? <a href={withBase(p.url)} className="hover:underline" {...(/^https?:/.test(p.url) && { target: "_blank", rel: "noopener noreferrer" })}>{p.title}</a> : p.title}</p>
                       <p className="mt-1 text-sm muted">{p.venue}, {p.year}</p>
                       {show(p.authors) && <p className="mt-1 text-sm muted">{p.authors}</p>}
+                      {p.url && /^https?:/.test(p.url) && (
+                        <a
+                          href={p.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-teal-700 hover:underline dark:text-teal-300"
+                        >
+                          Read the paper{p.doi && <span className="font-normal muted">· doi:{p.doi}</span>}
+                          <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+                        </a>
+                      )}
                       <VerifyBadge note={p.verify} className="mt-2" />
                     </div>
                   </li>

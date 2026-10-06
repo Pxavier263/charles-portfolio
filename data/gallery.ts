@@ -30,7 +30,7 @@ export const activities: Activity[] = [
     upcoming: true,
     description: "Poster on building Pan-African youth capacity for One Health AMR action through structured internship and mentorship.",
     photos: [
-      { alt: "Charles presenting his poster at ICID 2026", caption: "Poster presentation, ICID 2026", suggested: "/images/activities/icid-2026-poster.jpg" },
+      { alt: "Charles presenting his poster at ICID 2026", caption: "Poster presentation, ICID 2026", src: "/images/activities/icid-2026-posters.jpg" },
     ],
     enabled: true,
   },
@@ -52,14 +52,14 @@ export const activities: Activity[] = [
   {
     id: "science-day-icars",
     title: "Science Day discussions & ICARS Africa launch",
-    date: "August 2026",
-    sortDate: "2026-08-26",
+    date: "27 August 2026",
+    sortDate: "2026-08-27",
     location: "Nairobi, Kenya",
     category: "Stakeholder engagement",
-    description: "Participation in associated professional engagements during the Nairobi visit.",
-    photos: [{ alt: "ICARS Africa launch event", caption: "ICARS Africa launch", suggested: "/images/activities/icars-africa-launch.jpg" }],
+    description:
+      "Science Day discussions and the launch of ICARS Africa, bringing together the Kenya Ministry of Health, ReAct Africa, Africa CDC, Amref and the ICARS Africa team.",
+    photos: [{ alt: "ICARS Africa launch event", caption: "ICARS Africa launch", src: "/images/activities/icars-africa-launch.jpg" }],
     enabled: true,
-    verify: "Confirm exact dates, hosts and nature of participation.",
   },
   {
     id: "cohort-4",
@@ -98,10 +98,10 @@ export const activities: Activity[] = [
     sortDate: "2025-10-22",
     location: "Durban, South Africa",
     category: "Conference",
-    description: "Participation and abstract/session presentation at the 4th International Conference on Public Health in Africa.",
+    description: "Attended in person and presented an abstract on tackling AMR across borders through mentorship and capacity building at the 4th International Conference on Public Health in Africa.",
     photos: [{ alt: "Charles at CPHIA 2025", caption: "CPHIA 2025", suggested: "/images/activities/cphia-2025.jpg" }],
     enabled: true,
-    verify: "Confirm dates (brief said December) and in-person attendance.",
+    verify: "Confirm dates (brief said December).",
   },
   {
     id: "wa-review",
@@ -123,7 +123,7 @@ export const activities: Activity[] = [
     location: "UK Health Security Agency (hybrid event)",
     category: "Award",
     description: "Ducit Blue Foundation won the Multi-country Collaboration category for its Pan-African youth AMR programme (organisational award).",
-    photos: [{ alt: "Antibiotic Guardian Award certificate or trophy", caption: "Antibiotic Guardian Award 2025", suggested: "/images/awards/antibiotic-guardian-2025.jpg" }],
+    photos: [{ alt: "Antibiotic Guardian Award certificate or trophy", caption: "Antibiotic Guardian Award 2025", src: "/images/awards/winner.jpg" }],
     enabled: true,
   },
   {
@@ -145,10 +145,9 @@ export const activities: Activity[] = [
     location: "Nigeria",
     category: "Community",
     description: "National onboarding and knowledge-exchange sessions with members of the 500+ youth network.",
-    photos: [{ alt: "Community of Practice onboarding session", caption: "CoP onboarding session", suggested: "/images/activities/cop-onboarding.jpg" }],
+    photos: [{ alt: "Community of Practice onboarding session", caption: "CoP onboarding session, 27 March 2026", src: "/images/activities/cop-onboarding.jpg" }],
     projectId: "youth-cop",
     enabled: true,
-    verify: "Add the date of the session pictured.",
   },
   {
     id: "fct-pilot-engagement",

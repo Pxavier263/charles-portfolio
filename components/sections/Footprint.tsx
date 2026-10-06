@@ -70,18 +70,23 @@ export function Footprint() {
                 const p = project(lon, lat);
                 return <circle key={i} cx={p.x} cy={p.y} r={2.4} fill="rgb(var(--line) / 0.14)" />;
               })}
-              {/* Regional programme reach: a soft halo over the continent, not a travel marker */}
-              {(filter === "all" || filter === "Regional Programme") && (() => {
-                const c = project(18, 2);
-                return (
-                  <g>
-                    <ellipse cx={c.x} cy={c.y} rx={W * 0.36} ry={H * 0.38} fill="none" stroke="rgb(var(--accent))" strokeWidth={2} strokeDasharray="4 7" opacity={0.7} />
-                    <text x={c.x} y={c.y + H * 0.38 + 16} textAnchor="middle" style={{ fontSize: 11, fontWeight: 600 }} fill="rgb(var(--accent))">
-                      Programme reach: 14 countries
-                    </text>
-                  </g>
-                );
-              })()}
+              {/* Regional programme reach: dashed rings on participant countries, not travel markers.
+                  Country names are labelled only when this filter is on, to keep "All" readable. */}
+              {(filter === "all" || filter === "Regional Programme") &&
+                programmeReach.countries.map((c) => {
+                  const p = project(c.lon, c.lat);
+                  return (
+                    <g key={c.country} transform={`translate(${p.x} ${p.y})`}>
+                      <title>{`${c.country}: programme participants`}</title>
+                      <circle r={11} fill="rgb(var(--accent) / 0.08)" stroke="rgb(var(--accent))" strokeWidth={1.5} strokeDasharray="3 3" opacity={0.85} />
+                      {filter === "Regional Programme" && (
+                        <text x={14} y={4} style={{ fontSize: 11, fontWeight: 600 }} fill="rgb(var(--accent))">
+                          {c.country}
+                        </text>
+                      )}
+                    </g>
+                  );
+                })}
               {shown.map((f) => {
                 const p = project(f.lon, f.lat);
                 const t = primaryType(f.types);
@@ -138,7 +143,12 @@ export function Footprint() {
             <div className="mt-4 rounded-2xl border border-dashed border-teal-500/50 p-4">
               <p className="text-sm font-semibold">{programmeReach.label}</p>
               <p className="mt-1 text-sm muted">{programmeReach.text}</p>
-              <VerifyBadge note={programmeReach.verify} className="mt-2" />
+              <p className="mt-3 text-xs font-semibold uppercase tracking-wider muted">Participant countries</p>
+              <ul className="mt-2 flex flex-wrap gap-1.5" aria-label="Programme participant countries">
+                {programmeReach.countries.map((c) => (
+                  <li key={c.country} className="rounded-full border border-dashed border-orange-500/50 px-2.5 py-0.5 text-xs">{c.country}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

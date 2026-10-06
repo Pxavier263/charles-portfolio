@@ -201,14 +201,14 @@ export const projects: Project[] = [
     facts: [
       { label: "Dates", value: "24, 25 & 28 Aug 2026" },
       { label: "Location", value: "Nairobi, Kenya" },
-      { label: "Associated", value: "Science Day discussions · ICARS Africa launch" },
+      { label: "Associated", value: "Science Day discussions · ICARS Africa launch (27 Aug 2026)" },
     ],
     tags: ["amr", "sustainability", "programme", "capacity"],
     pillars: ["programmes", "amr-oh"],
     visual: "workshop-agenda",
     media: [{ alt: "Workshop facilitation in Nairobi", caption: "Nairobi workshop facilitation", suggested: "/images/projects/nairobi-workshop.jpg" }],
     verify:
-      "Confirm organisers, participant numbers, and the nature/dates of participation in the Science Day discussions and ICARS Africa launch.",
+      "Confirm workshop organisers, participant numbers, and your role at the Science Day / ICARS Africa launch.",
   },
   {
     id: "fct-pilot",
