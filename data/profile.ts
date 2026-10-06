@@ -16,7 +16,7 @@ export const siteConfig = {
    * confirmation show a small amber "To confirm" marker and a review banner appears.
    * Set to `false` before public launch.
    */
-  reviewMode: true,
+  reviewMode: false,
 
   /** Public URL, used for canonical/OG. Prefer setting NEXT_PUBLIC_SITE_URL in Vercel. */
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://ogu-charles.vercel.app",
