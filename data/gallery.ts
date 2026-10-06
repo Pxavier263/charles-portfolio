@@ -43,8 +43,8 @@ export const activities: Activity[] = [
     category: "Workshop",
     description: "Facilitating sessions on sustainability planning, resource mobilisation, diagnostics and exit & continuity.",
     photos: [
-      { alt: "Charles facilitating a workshop session in Nairobi", caption: "Workshop facilitation, Nairobi", suggested: "/images/activities/nairobi-workshop-1.jpg" },
-      { alt: "Workshop participants in group work", caption: "Group work session, Nairobi", suggested: "/images/activities/nairobi-workshop-2.jpg" },
+      { alt: "Charles facilitating a workshop session in Nairobi", caption: "Workshop facilitation, Nairobi", src: "/images/activities/nairobi-workshop-1.jpg" },
+      { alt: "Workshop participants in group work", caption: "Group work session, Nairobi", src: "/images/activities/nairobi-workshop-2.jpg" },
     ],
     projectId: "kenya-workshop",
     enabled: true,
@@ -70,12 +70,11 @@ export const activities: Activity[] = [
     category: "Programme",
     description: "Learning sessions, mentorship and capstone pitches with 25 interns from 14 African countries.",
     photos: [
-      { alt: "Screenshot of a Cohort 4 learning session", caption: "Cohort 4 learning session", suggested: "/images/activities/cohort4-session.jpg" },
-      { alt: "Capstone pitch presentations", caption: "Capstone pitches", suggested: "/images/activities/cohort4-capstone.jpg" },
+      { alt: "Screenshot of a Cohort 4 learning session", caption: "Cohort 4 learning session", src: "/images/activities/cohort4-session.jpg" },
+      { alt: "Capstone pitch presentations", caption: "Capstone pitches", src: "/images/activities/cohort4-capstone.jpg" },
     ],
     projectId: "cohort-4",
     enabled: true,
-    verify: "Add the programme month(s) for accurate ordering. If using session screenshots, get participants' consent.",
   },
   {
     id: "nicd-course",
@@ -86,8 +85,8 @@ export const activities: Activity[] = [
     category: "Training",
     description: "Regional training course on antimicrobial resistance in bacterial pathogens (NICD / WCS), including an oral presentation.",
     photos: [
-      { alt: "Course participants in Johannesburg", caption: "Course cohort, Johannesburg", suggested: "/images/activities/nicd-course-group.jpg" },
-      { alt: "Charles giving an oral presentation", caption: "Oral presentation", suggested: "/images/activities/nicd-course-presentation.jpg" },
+      { alt: "Course participants in Johannesburg", caption: "Course cohort, Johannesburg", src: "/images/activities/nicd-course-group.jpg" },
+      { alt: "Charles giving an oral presentation", caption: "Oral presentation", src: "/images/activities/nicd-course-presentation.jpg" },
     ],
     enabled: true,
   },
@@ -99,9 +98,8 @@ export const activities: Activity[] = [
     location: "Durban, South Africa",
     category: "Conference",
     description: "Attended in person and presented an abstract on tackling AMR across borders through mentorship and capacity building at the 4th International Conference on Public Health in Africa.",
-    photos: [{ alt: "Charles at CPHIA 2025", caption: "CPHIA 2025", suggested: "/images/activities/cphia-2025.jpg" }],
+    photos: [{ alt: "Charles at CPHIA 2025", caption: "CPHIA 2025", src: "/images/activities/cphia-20251.jpg" }],
     enabled: true,
-    verify: "Confirm dates (brief said December).",
   },
   {
     id: "wa-review",
@@ -111,9 +109,8 @@ export const activities: Activity[] = [
     location: "Abuja, Nigeria",
     category: "Stakeholder engagement",
     description: "Regional review meeting where Ducit Blue Foundation presented on the role of CSOs in the AMR response.",
-    photos: [{ alt: "Regional review meeting in Abuja", caption: "Regional review, Abuja", suggested: "/images/activities/wa-regional-review.jpg" }],
+    photos: [{ alt: "Regional review meeting in Abuja", caption: "Regional review, Abuja", src: "/images/activities/wa-regional-review.jpg" }],
     enabled: true,
-    verify: "Confirm Charles' role at the meeting.",
   },
   {
     id: "antibiotic-guardian",
@@ -134,7 +131,10 @@ export const activities: Activity[] = [
     location: "Abuja, Nigeria",
     category: "Workshop",
     description: "Workshop at which the Best Digital Innovative Solution recognition certificate was presented.",
-    photos: [{ alt: "Trinity Challenge workshop, Abuja", caption: "Trinity Challenge workshop", suggested: "/images/activities/trinity-challenge-2025.jpg" }],
+    photos: [
+      { alt: "Trinity Challenge workshop, Abuja", caption: "Trinity Challenge workshop", src: "/images/activities/trinity-challenge-2025.jpg" },
+      { alt: "Trinity Challenge workshop participants, Abuja", caption: "Trinity Challenge workshop, Abuja", src: "/images/activities/trinity-challenge-2025-2.jpg" },
+    ],
     enabled: true,
   },
   {
@@ -145,7 +145,7 @@ export const activities: Activity[] = [
     location: "Nigeria",
     category: "Community",
     description: "National onboarding and knowledge-exchange sessions with members of the 500+ youth network.",
-    photos: [{ alt: "Community of Practice onboarding session", caption: "CoP onboarding session, 27 March 2026", src: "/images/activities/cop-onboarding.jpg" }],
+    photos: [{ alt: "Community of Practice onboarding session", caption: "CoP onboarding session", src: "/images/activities/cop-onboarding.jpg" }],
     projectId: "youth-cop",
     enabled: true,
   },
@@ -157,10 +157,9 @@ export const activities: Activity[] = [
     location: "Federal Capital Territory, Nigeria",
     category: "Stakeholder engagement",
     description: "Engagement meetings for the proposed pilot with Ducit Blue Foundation and EcoMed Nexus Foundation.",
-    photos: [{ alt: "Stakeholder engagement meeting for the FCT pilot", caption: "Pilot stakeholder engagement", suggested: "/images/activities/fct-pilot-engagement.jpg" }],
+    photos: [{ alt: "Stakeholder engagement meeting for the FCT pilot", caption: "Pilot stakeholder engagement", src: "/images/activities/fct-pilot-engagement.jpg" }],
     projectId: "fct-pilot",
     enabled: true,
-    verify: "Confirm a meeting actually took place and its date before adding a photo.",
   },
 
   /* ---------------------------------------------------------------
