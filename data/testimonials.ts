@@ -23,7 +23,7 @@ export const testimonials: Testimonial[] = [
   {
     id: "chioma-ikenwe",
     quote:
-      "Charles handled my data analysis with real care. He cleaned a messy dataset, explained every step in plain language and turned the results into clear insights I could act on. Beyond the project, he mentored me through my transition into tech: he helped me choose the right skills to focus on, reviewed my practice projects and kept me accountable. His patience and encouragement made a career change that felt overwhelming feel achievable. I would recommend him to anyone who needs solid analysis or a mentor who genuinely invests in their growth.",
+      "Pharm. Charles handled my data analysis with real care. He cleaned a messy dataset, explained every step in plain language and turned the results into clear insights I could act on. Beyond the project, he mentored me through my transition into tech: he helped me choose the right skills to focus on, reviewed my practice projects and kept me accountable. His patience and encouragement made a career change that felt overwhelming feel achievable. I would recommend him to anyone who needs solid analysis or a mentor who genuinely invests in their growth.",
     name: "Chioma Ikenwe",
     role: "Assistant Manager",
     organisation: "Bedmate Furniture",
