@@ -36,7 +36,7 @@ export const sitePhotos = {
   contact: {
     alt: "Portrait of Charles, smiling",
     caption: "Friendly portrait for the contact page",
-    suggested: "/images/site/contact-portrait.jpg",
+    src: "/images/site/contact-portrait.jpg",
   },
   services: {
     me: { alt: "Reviewing programme monitoring data", caption: "M&E / monitoring work", src: "/images/site/service-me.jpg" },
