@@ -34,12 +34,13 @@ export type Size = "small" | "medium" | "large";
 
 export const pricing = {
   /** Set true once every value below is yours. */
-  confirmed: false,
+  confirmed: true,
   currency: "USD",
   locale: "en-US",
   /** Your day rate range. Leave null to show effort in days only (no money). */
-  dayRate: { low: null as number | null, high: null as number | null },
-  /** Effort in working days per service and size: [low, high]. PLACEHOLDERS. */
+  // Independent consultant range for NGO / development-sector work from Nigeria (USD, per day).
+  dayRate: { low: 150 as number | null, high: 250 as number | null },
+  /** Effort in working days per service and size: [low, high]. */
   effort: {
     me: { small: [3, 5], medium: [8, 12], large: [15, 25] },
     data: { small: [2, 4], medium: [6, 10], large: [12, 20] },
@@ -51,16 +52,17 @@ export const pricing = {
     { id: "medium" as Size, label: "Standard", hint: "A complete piece of work with one main deliverable" },
     { id: "large" as Size, label: "Comprehensive", hint: "Multi-component or multi-country work" },
   ],
-  /** Add-ons, each in days: [low, high] per unit. PLACEHOLDERS. */
+  /** Add-ons, each in days: [low, high] per unit. */
   addOns: [
     { id: "facilitation", label: "Facilitation day (incl. preparation)", perUnit: [1.5, 2] as [number, number], max: 5 },
     { id: "report", label: "Written report", perUnit: [2, 3] as [number, number], max: 1 },
     { id: "dashboard", label: "Power BI dashboard", perUnit: [3, 5] as [number, number], max: 1 },
   ],
-  /** Timeline multipliers on cost (e.g. a premium for urgent work). PLACEHOLDERS. */
-  timelineFactor: { urgent: 1.25, standard: 1.1, flexible: 1, exploring: 1 } as Record<string, number>,
-  /** Working days per week you can give one client: used for the duration estimate. PLACEHOLDER. */
-  daysPerWeek: 3,
+  /** Timeline multipliers on cost: only urgent work carries a premium. */
+  timelineFactor: { urgent: 1.25, standard: 1, flexible: 1, exploring: 1 } as Record<string, number>,
+  /** Working days per week you can give one client: used for the duration estimate.
+   *  Kept at 2 because consulting runs alongside a full-time role. */
+  daysPerWeek: 2,
   disclaimer:
     "Indicative only. A firm quote follows a short call about your programme, data and deliverables.",
 };
