@@ -6,6 +6,7 @@ import type { PublicationCategory } from "@/lib/types";
 import { VerifyBadge } from "../ui/VerifyBadge";
 import { show } from "@/lib/content";
 import { withBase } from "@/lib/paths";
+import { profile } from "@/data/profile";
 
 export function Research() {
   const [cat, setCat] = useState<PublicationCategory | "All">("All");
@@ -21,7 +22,15 @@ export function Research() {
               <p className="eyebrow">Research & publications</p>
               <h2 id="research-title" className="mt-2 text-2xl font-medium md:text-3xl">Outputs</h2>
             </div>
-            <p className="max-w-sm text-sm muted">Only confirmed outputs are listed. Categories fill in as work is published.</p>
+            <div className="max-w-sm text-sm muted">
+              <p>Only confirmed outputs are listed. Categories fill in as work is published.</p>
+              {profile.links.orcid && (
+                <a href={profile.links.orcid} target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex items-center gap-1 font-medium text-teal-700 hover:underline dark:text-teal-300">
+                  ORCID: {profile.links.orcid.replace("https://orcid.org/", "")}
+                  <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+                </a>
+              )}
+            </div>
           </div>
           <div className="mt-6 flex flex-wrap gap-2" role="group" aria-label="Filter outputs by category">
             {(["All", ...publicationCategories] as const).map((c) => (

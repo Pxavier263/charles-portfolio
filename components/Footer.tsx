@@ -20,6 +20,11 @@ export function Footer() {
             <li>
               <ExternalOrPlaceholder href={profile.links.linkedin} label="LinkedIn profile" className="hover:text-orange-700 hover:underline dark:hover:text-orange-300">LinkedIn</ExternalOrPlaceholder>
             </li>
+            {profile.links.orcid && (
+              <li>
+                <a href={profile.links.orcid} target="_blank" rel="noopener noreferrer" aria-label="ORCID profile" className="hover:text-orange-700 hover:underline dark:hover:text-orange-300">ORCID</a>
+              </li>
+            )}
           </ul>
         </nav>
         <p className="text-sm muted md:text-right">
