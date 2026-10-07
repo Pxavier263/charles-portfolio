@@ -113,8 +113,8 @@ export const projects: Project[] = [
     pillars: ["amr-oh", "policy", "youth", "programmes", "data"],
     visual: "pipeline",
     media: [
-      { alt: "Cohort 4 virtual learning session", caption: "Cohort 4 learning session", src: "/images/activities/cohort4-session.jpg" },
-      { alt: "Capstone pitch presentations", caption: "Capstone pitches", src: "/images/activities/cohort4-capstone.jpg" },
+      { alt: "Cohort 4 virtual learning session", caption: "Cohort 4 learning session", src: "/images/projects/cohort4-session.jpg" },
+      { alt: "Capstone pitch presentations", caption: "Capstone pitches", src: "/images/projects/cohort4-capstone.jpg" },
     ],
     verify: "Confirm the programme has concluded (status 'completed') and whether the alumni network is formally established.",
   },
