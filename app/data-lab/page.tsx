@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { withBase } from "@/lib/paths";
 import { ArrowLeft, BarChart3, ClipboardList, ExternalLink, Gauge, LineChart, Map, PieChart } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -15,9 +16,30 @@ export const metadata: Metadata = {
 const dashboards = [
   {
     id: "powerbi-1",
-    title: "Power BI dashboard",
+    title: "Empowering Education in Northern Nigeria: A Comprehensive Monitoring and Evaluation (M&E) Dashboard",
     text: "An interactive Power BI dashboard. Use the page tabs along the bottom of the report to explore each view.",
     src: "https://app.powerbi.com/view?r=eyJrIjoiMjUxMDNmYjAtYjg3OS00MzFhLWE2MjktODc1OTAzZTFjMjEyIiwidCI6Ijg3OTAxZTBhLWViOTctNDA5YS1hNWE0LTdjNjEyZDFjOTQ3NiJ9",
+  },
+  {
+    id: "powerbi-2",
+    title: "HR Healthcare Analytic Report",
+    text: "An interactive Power BI dashboard. Use the page tabs along the bottom of the report to explore each view.",
+    src: "https://app.powerbi.com/view?r=eyJrIjoiOTRjOWY4MzItYzAzMy00ZDU0LTkzYWUtOTJkMTg4ODFkMTU2IiwidCI6Ijg3OTAxZTBhLWViOTctNDA5YS1hNWE0LTdjNjEyZDFjOTQ3NiJ9",
+  },
+];
+
+/** Static maps (exported from QGIS). Images live in public/images/data-lab/. */
+const maps = [
+  {
+    id: "rwanda-hiv-2010",
+    title: "Rwanda: HIV prevalence by sex versus total HIV prevalence among adults aged 15 to 49, by district, 2010",
+    text:
+      "A choropleth map made in QGIS. District shading shows total HIV prevalence in five equal intervals (0.9% to 8.3%), and the paired bars compare female and male prevalence in each district. Prevalence is highest in the three central Kigali City districts, and female prevalence exceeds male prevalence in most districts.",
+    source: "Data: Rwanda DHS 2010. Boundaries: Rwanda Ministry of Health, Health Facility Database (April 2011).",
+    src: "/images/data-lab/rwanda-hiv-prevalence-2010.jpg",
+    alt: "Choropleth map of Rwanda's districts shaded by total HIV prevalence among adults aged 15 to 49 in 2010, ranging from 0.9% to 8.3%, with the darkest shading in the central Kigali City districts. Small paired bars in each district show female prevalence higher than male in most districts.",
+    width: 2000,
+    height: 1414,
   },
 ];
 
@@ -25,7 +47,6 @@ const slots = [
   { icon: LineChart, title: "Public-health visualisations", text: "Charts that make trends and gaps easy to read." },
   { icon: ClipboardList, title: "Survey analyses", text: "Feedback and assessment survey findings." },
   { icon: BarChart3, title: "Interactive charts", text: "Explorable views of programme data." },
-  { icon: Map, title: "Geospatial analyses", text: "QGIS maps of reach, resources and risk." },
   { icon: PieChart, title: "Monitoring dashboards", text: "Indicator tracking for programme teams." },
 ];
 
@@ -87,6 +108,34 @@ export default function DataLab() {
                   allowFullScreen
                 />
               </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section aria-labelledby="maps-title" className="mt-16">
+        <h2 id="maps-title" className="flex items-center gap-2 font-sans text-sm font-semibold uppercase tracking-eyebrow text-teal-700 dark:text-teal-300">
+          <Map className="h-4 w-4" aria-hidden /> Geospatial analyses
+        </h2>
+        <div className="mt-5 space-y-8">
+          {maps.map((m) => (
+            <article key={m.id} className="card overflow-hidden">
+              <div className="flex flex-wrap items-start justify-between gap-4 p-6 md:p-7">
+                <div className="max-w-3xl">
+                  <h3 className="font-serif text-2xl">{m.title}</h3>
+                  <p className="mt-1 text-sm muted">{m.text}</p>
+                </div>
+                <a href={withBase(m.src)} target="_blank" rel="noopener noreferrer" className="btn-ghost !py-2 text-sm">
+                  View full size <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+                </a>
+              </div>
+              <figure className="border-t hairline bg-white">
+                <a href={withBase(m.src)} target="_blank" rel="noopener noreferrer" aria-label={`${m.title}: open full size`}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={withBase(m.src)} alt={m.alt} width={m.width} height={m.height} loading="lazy" className="h-auto w-full" />
+                </a>
+                <figcaption className="border-t hairline bg-[rgb(var(--surface))] px-6 py-3 text-xs muted md:px-7">{m.source}</figcaption>
+              </figure>
             </article>
           ))}
         </div>
