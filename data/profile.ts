@@ -139,6 +139,7 @@ export const NAV = {
     { label: "Services", href: "/services" },
     { label: "About", href: "/about" },
     { label: "Research", href: "/about#research" },
+    { label: "Reviews", href: "/#reviews" },
     { label: "Data Lab", href: "/data-lab" },
     { label: "Work with me", href: "/work-with-me" },
   ],

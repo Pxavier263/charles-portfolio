@@ -4,7 +4,7 @@ import { siteConfig } from "@/data/profile";
 import { publishedTestimonials } from "@/data/testimonials";
 import { withBase } from "@/lib/paths";
 
-function Stars({ value, size = "h-4 w-4" }: { value: number; size?: string }) {
+export function Stars({ value, size = "h-4 w-4" }: { value: number; size?: string }) {
   return (
     <span className="inline-flex items-center gap-0.5" role="img" aria-label={`Rated ${value.toFixed(1).replace(/\.0$/, "")} out of 5`}>
       {[1, 2, 3, 4, 5].map((i) => {
