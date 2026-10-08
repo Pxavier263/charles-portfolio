@@ -4,7 +4,7 @@ import { BookingCalendar } from "@/components/contact/BookingCalendar";
 import { ContactOptions } from "@/components/contact/ContactOptions";
 import { EnquiryForm } from "@/components/contact/EnquiryForm";
 import { Estimator } from "@/components/contact/Estimator";
-import { Reviews } from "@/components/contact/Reviews";
+import { LiveReviews } from "@/components/home/LiveReviews";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { Reveal } from "@/components/ui/Reveal";
 import { ImageSlot } from "@/components/ui/ImageSlot";
@@ -12,7 +12,6 @@ import { sitePhotos } from "@/data/photos";
 import { availability, pricing } from "@/data/conversion";
 import { siteConfig } from "@/data/profile";
 import { audiences, contactConfig, faqs, process } from "@/data/services";
-import { publishedTestimonials } from "@/data/testimonials";
 import { show } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -26,7 +25,6 @@ export default function WorkWithMe() {
   const visibleFaqs = faqs.filter((f) => show(f.a));
   const showEstimate = pricing.confirmed || siteConfig.reviewMode;
   const showBooking = availability.confirmed || siteConfig.reviewMode || !!availability.bookingUrl;
-  const showReviews = publishedTestimonials().length > 0 || siteConfig.reviewMode;
 
   return (
     <>
@@ -98,15 +96,7 @@ export default function WorkWithMe() {
         </section>
       )}
 
-      {showReviews && (
-        <section id="reviews" aria-labelledby="reviews-t" className="band-canvas scroll-mt-20 py-16 md:py-24">
-          <div className="container">
-            <p className="eyebrow">Client reviews</p>
-            <h2 id="reviews-t" className="mt-3 text-3xl font-medium md:text-4xl">What clients and partners say</h2>
-            <div className="mt-10"><Reviews /></div>
-          </div>
-        </section>
-      )}
+      <LiveReviews />
 
       <section aria-labelledby="faq-t" className="band-tint py-16 md:py-24">
         <div className="container max-w-3xl">
