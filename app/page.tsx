@@ -3,7 +3,6 @@ import { ClosingCTA } from "@/components/home/ClosingCTA";
 import { Credentials } from "@/components/home/Credentials";
 import { Hero } from "@/components/home/Hero";
 import { HowIWork } from "@/components/home/HowIWork";
-import { HomeTestimonials } from "@/components/home/HomeTestimonials";
 import { LiveReviews } from "@/components/home/LiveReviews";
 import { FeaturedShowcase } from "@/components/home/FeaturedShowcase";
 import { ServicesGrid } from "@/components/home/ServicesGrid";
@@ -22,7 +21,6 @@ export default function Home() {
       <ServicesGrid />
       <FeaturedShowcase />
       <ImpactSnapshot />
-      <HomeTestimonials />
       <HowIWork />
       <Credentials />
       <AboutTeaser />
