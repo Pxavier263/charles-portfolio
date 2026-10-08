@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { withBase } from "@/lib/paths";
-import { ArrowLeft, BarChart3, ClipboardList, ExternalLink, Gauge, LineChart, Map, PieChart } from "lucide-react";
+import { ArrowLeft, BarChart3, ClipboardList, ExternalLink, Gauge, Github, LineChart, Map, PieChart } from "lucide-react";
+import { profile } from "@/data/profile";
 
 export const metadata: Metadata = {
   title: "Data Lab",
@@ -82,6 +83,11 @@ export default function DataLab() {
       <p className="mt-5 max-w-2xl text-lg muted">
         Dashboards, analyses and maps, added as they are cleared for public sharing.
       </p>
+      {profile.links.github && (
+        <a href={profile.links.github} target="_blank" rel="noopener noreferrer" className="btn-ghost mt-6">
+          <Github className="h-4 w-4" aria-hidden /> See my code on GitHub <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+        </a>
+      )}
 
       <section aria-labelledby="dashboards-title" className="mt-12">
         <h2 id="dashboards-title" className="flex items-center gap-2 font-sans text-sm font-semibold uppercase tracking-eyebrow text-teal-700 dark:text-teal-300">

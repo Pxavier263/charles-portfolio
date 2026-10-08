@@ -25,6 +25,11 @@ export function Footer() {
                 <a href={profile.links.orcid} target="_blank" rel="noopener noreferrer" aria-label="ORCID profile" className="hover:text-orange-700 hover:underline dark:hover:text-orange-300">ORCID</a>
               </li>
             )}
+            {profile.links.github && (
+              <li>
+                <a href={profile.links.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="hover:text-orange-700 hover:underline dark:hover:text-orange-300">GitHub</a>
+              </li>
+            )}
           </ul>
         </nav>
         <p className="text-sm muted md:text-right">

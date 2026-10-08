@@ -1,4 +1,4 @@
-import { ArrowRight, Calculator, CalendarCheck, FileText, Linkedin } from "lucide-react";
+import { ArrowRight, Calculator, CalendarCheck, FileText, Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { availability, pricing } from "@/data/conversion";
 import { profile, siteConfig } from "@/data/profile";
@@ -41,6 +41,11 @@ export function ClosingCTA({ title = "Running an AMR or One Health programme? Le
           <ExternalOrPlaceholder href={profile.links.linkedin} label="Connect on LinkedIn" className="btn-on-ink !px-6 !py-3" showPlaceholder={false}>
             <Linkedin className="h-4 w-4" aria-hidden /> LinkedIn
           </ExternalOrPlaceholder>
+          {profile.links.github && (
+            <a href={profile.links.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="btn-on-ink !px-6 !py-3">
+              <Github className="h-4 w-4" aria-hidden /> GitHub
+            </a>
+          )}
         </div>
       </Reveal>
     </section>

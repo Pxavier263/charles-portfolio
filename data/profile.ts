@@ -60,6 +60,7 @@ export const profile = {
 
   links: {
     linkedin: "https://www.linkedin.com/in/ogucharles/" as string | null,
+    github: "https://github.com/Pxavier263" as string | null,
     orcid: "https://orcid.org/0009-0007-5440-6611" as string | null,
     googleScholar: null as string | null,
     researchGate: null as string | null,
