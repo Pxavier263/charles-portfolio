@@ -1,15 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, BarChart3, ClipboardList, Gauge, LineChart, Map, PieChart } from "lucide-react";
+import { ArrowLeft, BarChart3, ClipboardList, ExternalLink, Gauge, LineChart, Map, PieChart } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Data Lab",
-  description: "Upcoming showcase of public-health dashboards, survey analyses and geospatial work by Ogu Charles Chukwudi.",
+  description: "Public-health dashboards, survey analyses and geospatial work by Ogu Charles Chukwudi.",
   alternates: { canonical: "/data-lab" },
 };
 
+/**
+ * Live dashboards (Power BI "Publish to web" links). Publish to web makes the data fully public:
+ * only add dashboards built on non-sensitive, approved data.
+ */
+const dashboards = [
+  {
+    id: "powerbi-1",
+    title: "Power BI dashboard",
+    text: "An interactive Power BI dashboard. Use the page tabs along the bottom of the report to explore each view.",
+    src: "https://app.powerbi.com/view?r=eyJrIjoiMjUxMDNmYjAtYjg3OS00MzFhLWE2MjktODc1OTAzZTFjMjEyIiwidCI6Ijg3OTAxZTBhLWViOTctNDA5YS1hNWE0LTdjNjEyZDFjOTQ3NiJ9",
+  },
+];
+
 const slots = [
-  { icon: Gauge, title: "Power BI dashboards", text: "Programme performance and monitoring dashboards." },
   { icon: LineChart, title: "Public-health visualisations", text: "Charts that make trends and gaps easy to read." },
   { icon: ClipboardList, title: "Survey analyses", text: "Feedback and assessment survey findings." },
   { icon: BarChart3, title: "Interactive charts", text: "Explorable views of programme data." },
@@ -47,17 +59,49 @@ export default function DataLab() {
       <p className="eyebrow mt-10">Data Lab</p>
       <h1 className="mt-3 max-w-3xl text-4xl font-medium leading-tight md:text-5xl">Where programme data becomes something people can use.</h1>
       <p className="mt-5 max-w-2xl text-lg muted">
-        This space will showcase dashboards, analyses and maps as they are cleared for public sharing. The panels below are
-        layout previews only. They contain no data and do not represent real results.
+        Dashboards, analyses and maps, added as they are cleared for public sharing.
       </p>
-      <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+      <section aria-labelledby="dashboards-title" className="mt-12">
+        <h2 id="dashboards-title" className="flex items-center gap-2 font-sans text-sm font-semibold uppercase tracking-eyebrow text-teal-700 dark:text-teal-300">
+          <Gauge className="h-4 w-4" aria-hidden /> Power BI dashboards
+        </h2>
+        <div className="mt-5 space-y-8">
+          {dashboards.map((d) => (
+            <article key={d.id} className="card overflow-hidden">
+              <div className="flex flex-wrap items-start justify-between gap-4 p-6 md:p-7">
+                <div className="max-w-2xl">
+                  <h3 className="font-serif text-2xl">{d.title}</h3>
+                  <p className="mt-1 text-sm muted">{d.text}</p>
+                </div>
+                <a href={d.src} target="_blank" rel="noopener noreferrer" className="btn-ghost !py-2 text-sm">
+                  Open full screen <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+                </a>
+              </div>
+              <div className="relative aspect-[4/5] w-full border-t hairline bg-paper-100 dark:bg-ink-800/60 sm:aspect-[16/10]">
+                <iframe
+                  title={`${d.title} (interactive Power BI report)`}
+                  src={d.src}
+                  className="absolute inset-0 h-full w-full"
+                  loading="lazy"
+                  allowFullScreen
+                />
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <h2 className="mt-16 font-sans text-sm font-semibold uppercase tracking-eyebrow text-teal-700 dark:text-teal-300">Coming soon</h2>
+      <p className="mt-2 max-w-2xl text-sm muted">Layout previews only. They contain no data and do not represent real results.</p>
+      <ul className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {slots.map((s, i) => (
           <li key={s.title} className="card p-6">
             <div className="flex items-center justify-between">
               <s.icon className="h-5 w-5 text-teal-600 dark:text-teal-300" aria-hidden />
               <span className="chip text-[0.65rem]">Coming soon</span>
             </div>
-            <h2 className="mt-4 font-serif text-xl">{s.title}</h2>
+            <h3 className="mt-4 font-serif text-xl">{s.title}</h3>
             <p className="mt-1 text-sm muted">{s.text}</p>
             <DemoSkeleton i={i} />
           </li>
