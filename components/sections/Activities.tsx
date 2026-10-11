@@ -42,7 +42,7 @@ function PhotoViewer({ activity, onClose }: { activity: Activity | null; onClose
           <p className="mt-4 max-w-3xl leading-relaxed muted">{activity.description}</p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             {activity.photos.map((ph) => (
-              <ImageSlot key={ph.caption + (ph.src ?? ph.suggested)} image={ph} className="aspect-[3/2]" sizes="(min-width: 768px) 480px, 100vw" />
+              <ImageSlot key={ph.caption + (ph.src ?? ph.suggested)} image={ph} fit={ph.fit} className="aspect-[3/2]" sizes="(min-width: 768px) 480px, 100vw" />
             ))}
           </div>
         </div>

@@ -132,6 +132,37 @@ export const activities: Activity[] = [
     enabled: true,
   },
   {
+    id: "nap2-development-workshops",
+    title: "Nigeria AMR National Action Plan 2.0: development workshops",
+    date: "August to November 2023",
+    sortDate: "2023-11-06",
+    location: "Akwanga (Nasarawa State) and Abuja, Nigeria",
+    category: "Workshop",
+    description:
+      "Contributed, with Ducit Blue Foundation, to the multisectoral workshops that developed Nigeria's One Health AMR National Action Plan 2.0 (2024–2028): stakeholder mapping (virtual), situational analysis and SWOT, strategic and operational planning with M&E, and budgeting and costing. Listed among contributors in Annex 2 of the published plan.",
+    photos: [
+      {
+        alt: "Participants holding certificates at the AMR NAP 2.0 budgeting and costing workshop in Abuja, in front of the workshop banner",
+        caption: "Budgeting & costing workshop, Abuja, November 2023",
+        src: "/images/activities/nap2-costing-2023.jpg",
+      },
+      {
+        alt: "Group photo of participants at the AMR NAP 2.0 situational analysis and SWOT workshop in Akwanga, Nasarawa State",
+        caption: "Situational analysis & SWOT workshop, Akwanga, September 2023",
+        src: "/images/activities/nap2-situational-analysis-2023.jpg",
+        fit: "contain",
+      },
+      {
+        alt: "Group photo of participants at the AMR NAP 2.0 strategic plan, operational plan and M&E workshop in Abuja",
+        caption: "Strategic plan, operational plan & M&E workshop, Abuja, October 2023",
+        src: "/images/activities/nap2-strategic-plan-2023.jpg",
+        fit: "contain",
+      },
+    ],
+    projectId: "nigeria-amr-nap-2",
+    enabled: true,
+  },
+  {
     id: "cwpams-closeout-2025",
     title: "CwPAMS 2.5 Nigeria Close-Out & Sustainability Event",
     date: "10 December 2025",

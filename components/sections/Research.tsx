@@ -66,7 +66,7 @@ export function Research() {
                           rel="noopener noreferrer"
                           className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-teal-700 hover:underline dark:text-teal-300"
                         >
-                          Read the paper{p.doi && <span className="font-normal muted">· doi:{p.doi}</span>}
+                          {p.doi ? "Read the paper" : "Read the document"}{p.doi && <span className="font-normal muted">· doi:{p.doi}</span>}
                           <ExternalLink className="h-3.5 w-3.5" aria-hidden />
                         </a>
                       )}

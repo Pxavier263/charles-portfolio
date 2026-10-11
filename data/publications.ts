@@ -41,6 +41,17 @@ export const publications: Publication[] = [
     url: "https://doi.org/10.1186/s12909-026-09843-y",
   },
   {
+    id: "nigeria-amr-nap-2",
+    category: "Policy Products",
+    title: "One Health Antimicrobial Resistance National Action Plan 2.0 (2024–2028)",
+    authors: "Contributor: participated in the NAP 2.0 development workshops (listed in Annex 2)",
+    venue:
+      "Federal Ministries of Agriculture and Food Security, Environment, and Health and Social Welfare; Nigeria Centre for Disease Control and Prevention",
+    year: "2024",
+    status: "National policy · Published April 2024",
+    url: "https://ncdc.gov.ng/themes/common/files/establishment/1f38432a65b71d397a2384dee3d87bd3.pdf",
+  },
+  {
     id: "icid-poster",
     category: "Posters",
     title:

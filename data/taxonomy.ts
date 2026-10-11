@@ -7,6 +7,7 @@ export const PROJECT_TYPES: ProjectType[] = [
   "Workshop & facilitation",
   "Pilot design",
   "Network leadership",
+  "Policy development",
 ];
 
 export const SECTORS: Sector[] = [

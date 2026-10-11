@@ -43,6 +43,91 @@ export const copWorkingGroups = [
 
 export const projects: Project[] = [
   {
+    id: "nigeria-amr-nap-2",
+    cover: {
+      alt: "Participants holding certificates at the AMR NAP 2.0 budgeting and costing workshop in Abuja",
+      caption: "AMR NAP 2.0 budgeting and costing workshop, Abuja",
+      src: "/images/activities/nap2-costing-2023.jpg",
+    },
+    type: "Policy development",
+    sectors: ["Global health & AMR", "One Health"],
+    skills: ["Policy development", "Stakeholder engagement", "Strategic planning", "M&E design", "Costing"],
+    beforeAfter: {
+      kind: "output",
+      before: {
+        label: "NAP 1.0 (2017–2023)",
+        text: "Nigeria's first AMR plan ended with gaps in governance, funding and implementation at state level, and no dedicated governance objective.",
+      },
+      after: {
+        label: "NAP 2.0 (2024–2028)",
+        text: "A costed One Health plan with a new governance objective, an operational plan of 451 sub-activities and a monitoring and evaluation framework.",
+      },
+    },
+    homeOrder: 2,
+    credit:
+      "Led by NCDC and Nigeria's One Health ministries with support from WHO, FAO, WOAH and UNEP. Charles contributed as a workshop participant representing Ducit Blue Foundation.",
+    headline: { value: "6 · 451", label: "objectives · costed sub-activities" },
+    related: ["youth-cop", "cohort-4"],
+    title: "Nigeria's One Health AMR National Action Plan 2.0 (2024–2028)",
+    shortTitle: "National Action Plan on AMR 2.0",
+    year: "2024",
+    status: "completed",
+    organisations: [
+      "Nigeria Centre for Disease Control and Prevention (NCDC)",
+      "Federal Ministries of Agriculture and Food Security, Environment, and Health and Social Welfare",
+    ],
+    scope: "National, Nigeria · Development workshops August to November 2023 · Published April 2024",
+    summary:
+      "Nigeria's five-year, costed One Health plan for tackling antimicrobial resistance across human, animal, plant and environmental health. Charles contributed through the multisectoral development workshops.",
+    challenge:
+      "Nigeria ranks 19th of 204 countries for age-standardised AMR mortality, with 64,500 deaths attributable to AMR in 2019. The first national plan left gaps in governance, funding and state-level implementation that the new plan had to close.",
+    role: [
+      "Represented Ducit Blue Foundation in the national NAP 2.0 development workshops",
+      "Took part in stakeholder mapping, the situational and SWOT analysis, strategic and operational planning with M&E, and budgeting and costing",
+      "Listed among contributors in Annex 2 of the published plan",
+    ],
+    approach: [
+      "Review of NAP 1.0 and a One Health situational analysis of AMR in Nigeria",
+      "Stakeholder mapping: 145 stakeholder groups mapped by interest and influence",
+      "SWOT analysis and prioritisation of 157 recommendations across six strategic objectives",
+      "Strategic and operational planning with a monitoring and evaluation framework",
+      "Costing every sub-activity with the WHO NAP Costing and Budgeting Tool",
+    ],
+    collaborators: [
+      "Nigeria Centre for Disease Control and Prevention",
+      "Federal Ministries of Agriculture and Food Security, Environment, and Health and Social Welfare",
+      "WHO, FAO, WOAH and UNEP",
+      "USAID MTaPS and the One Health Trust",
+      "Academia, regulators, professional councils, civil society and the private sector",
+    ],
+    outputs: [
+      "Published national plan: 6 strategic objectives, 40 intervention areas, 143 activities and 451 costed sub-activities",
+      "Monitoring and evaluation framework with impact and outcome indicators",
+      "Indicative five-year budget of ₦62.3 billion (USD 77.6 million)",
+    ],
+    impact: [
+      "The plan sets Nigeria's national AMR priorities across the One Health sectors for 2024 to 2028.",
+      "Progress will be measured through the plan's mid-term and end-term evaluations; no implementation results are claimed here.",
+    ],
+    methods: ["Stakeholder mapping", "SWOT analysis", "Strategic and operational planning", "M&E framework design", "Costing"],
+    facts: [
+      { label: "Published", value: "April 2024" },
+      { label: "Period", value: "2024–2028" },
+      { label: "Scope", value: "6 objectives · 451 sub-activities" },
+      { label: "Budget", value: "USD 77.6 million (indicative)" },
+    ],
+    document: {
+      label: "Read the plan (NCDC, PDF)",
+      href: "https://ncdc.gov.ng/themes/common/files/establishment/1f38432a65b71d397a2384dee3d87bd3.pdf",
+    },
+    tags: ["amr", "one-health", "policy"],
+    pillars: ["policy", "amr-oh"],
+    media: [
+      { alt: "Group photo at the AMR NAP 2.0 situational analysis and SWOT workshop in Akwanga, Nasarawa State", caption: "Situational analysis & SWOT workshop, Akwanga, September 2023", src: "/images/activities/nap2-situational-analysis-2023.jpg", fit: "contain" },
+      { alt: "Group photo at the AMR NAP 2.0 strategic plan, operational plan and M&E workshop in Abuja", caption: "Strategic & operational plan workshop, Abuja, October 2023", src: "/images/activities/nap2-strategic-plan-2023.jpg", fit: "contain" },
+    ],
+  },
+  {
     id: "cohort-4",
     cover: { alt: "Cohort 4 participants and mentors", caption: "Cohort 4 cover photo", src: "/images/projects/cohort-4-cover.jpg" },
     type: "Capacity-building programme",
@@ -53,7 +138,7 @@ export const projects: Project[] = [
       before: { label: "At the start", text: "25 young professionals from 14 African countries and several disciplines join to learn how AMR governance works in practice.", image: { alt: "Cohort 4 opening session", caption: "Opening session", suggested: "/images/projects/cohort4-before.jpg" } },
       after: { label: "By the capstone", text: "Each intern works towards an AMR Youth Governance Innovation Dossier: a governance diagnostic, a policy translation product, an implementation plan and a pitch.", image: { alt: "Capstone pitch presentations", caption: "Capstone pitches", suggested: "/images/projects/cohort4-after.jpg" } },
     },
-    homeOrder: 2,
+    homeOrder: 3,
     credit: "Delivered by Ducit Blue Foundation in collaboration with One Health Society.",
     headline: { value: "25 · 14", label: "interns · countries" },
     reflection: [
@@ -268,7 +353,7 @@ export const projects: Project[] = [
       before: { label: "The gap", text: "Young people affected by and working on AMR, with no structured way to contribute to the national response." },
       after: { label: "The network", text: "A national community of 500+ members organised around the themes of the national AMR response." },
     },
-    homeOrder: 3,
+    homeOrder: 4,
     headline: { value: "500+", label: "active members" },
     related: ["cohort-4", "fct-pilot"],
     title: "Nigerian Youth AMR Community of Practice",

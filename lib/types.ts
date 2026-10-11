@@ -45,6 +45,8 @@ export interface ImagePlaceholder {
   caption: string;
   /** Suggested file path shown on the placeholder in review mode, so you know where to save the photo. */
   suggested?: string;
+  /** "contain" shows the whole photo (for wide group shots) instead of cropping to the frame. */
+  fit?: "cover" | "contain";
 }
 
 export type ActivityCategory = "Workshop" | "Conference" | "Training" | "Programme" | "Community" | "Award" | "Stakeholder engagement";
@@ -72,7 +74,8 @@ export type ProjectType =
   | "Evaluation & analysis"
   | "Workshop & facilitation"
   | "Pilot design"
-  | "Network leadership";
+  | "Network leadership"
+  | "Policy development";
 
 export type Sector =
   | "Global health & AMR"
@@ -136,6 +139,8 @@ export interface Project extends Verifiable {
   reflection?: string[];
   /** One headline figure shown on hover/preview cards. */
   headline?: { value: string; label: string };
+  /** Optional link to the published document or output (opens in a new tab). */
+  document?: { label: string; href: string };
   /** Related case studies (ids). */
   related?: string[];
   /** Showcase taxonomy: values come from data/taxonomy.ts */

@@ -44,7 +44,7 @@ export function Gallery({ photos, title }: { photos: ImagePlaceholder[]; title: 
         {real.map((p, i) => (
           <li key={p.src} className={i === 0 ? "sm:col-span-2 sm:row-span-2" : ""}>
             <button type="button" onClick={() => setOpen(i)} className="group relative block h-full w-full overflow-hidden rounded-2xl" aria-label={`Open photo: ${p.caption}`}>
-              <Image src={withBase(p.src!)} alt={p.alt} fill sizes="(min-width: 640px) 50vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none" />
+              <Image src={withBase(p.src!)} alt={p.alt} fill sizes="(min-width: 640px) 50vw, 100vw" className={`${p.fit === "contain" ? "object-contain" : "object-cover"} transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none`} />
               <span className="absolute inset-0 bg-gradient-to-t from-ink-950/60 via-transparent opacity-80 transition-opacity group-hover:opacity-100" aria-hidden />
               <span className="absolute bottom-3 left-4 right-10 text-left text-xs font-medium text-white">{p.caption}</span>
               <Expand className="absolute bottom-3 right-3 h-4 w-4 text-white opacity-0 transition-opacity group-hover:opacity-100" aria-hidden />

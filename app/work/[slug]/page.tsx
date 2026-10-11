@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 import { Visual } from "@/components/work/Visual";
 import { Reveal } from "@/components/ui/Reveal";
 import { TagList } from "@/components/ui/TagChip";
@@ -116,6 +116,11 @@ export default function CaseStudy({ params }: { params: { slug: string } }) {
                   </div>
                 ))}
               </dl>
+            )}
+            {p.document && (
+              <a href={p.document.href} target="_blank" rel="noopener noreferrer" className="btn-ghost mt-8">
+                {p.document.label} <ExternalLink className="h-4 w-4" aria-hidden />
+              </a>
             )}
           </Reveal>
         </div>

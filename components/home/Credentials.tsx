@@ -1,10 +1,11 @@
-import { Award, BadgeCheck, GraduationCap, Mic, Microscope } from "lucide-react";
+import { Award, BadgeCheck, GraduationCap, Mic, Microscope, ScrollText } from "lucide-react";
 import Link from "next/link";
 import { Reveal } from "../ui/Reveal";
 
 const items = [
   { icon: BadgeCheck, title: "Licensed pharmacist", sub: "Pharmacists Council of Nigeria" },
   { icon: GraduationCap, title: "B.Pharm · MSc Public Health (in progress)", sub: "University of Port Harcourt · Ahmadu Bello University" },
+  { icon: ScrollText, title: "Contributor, Nigeria's AMR National Action Plan 2.0", sub: "One Health NAP 2024–2028 · NCDC and Federal Ministries" },
   { icon: Mic, title: "ICID 2026: accepted poster", sub: "Madrid, 10–13 November 2026" },
   { icon: Microscope, title: "AMR in Bacterial Pathogens – Africa Course", sub: "NICD / WCS, Johannesburg, 2026" },
   { icon: Award, title: "2025 Antibiotic Guardian Award", sub: "Won by Ducit Blue Foundation's Pan-African youth AMR programme, which I contribute to" },
@@ -18,7 +19,7 @@ export function Credentials() {
           <h2 id="cred-title" className="text-2xl font-medium md:text-3xl">Credentials &amp; recognition</h2>
           <Link href="/about#recognition" className="text-sm font-semibold underline decoration-orange-500 underline-offset-4">Full profile</Link>
         </div>
-        <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+        <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((c, i) => (
             <Reveal as="li" key={c.title} delay={i * 0.04} className="rounded-2xl border hairline p-5">
               <c.icon className="h-5 w-5 text-teal-700 dark:text-teal-300" aria-hidden />
