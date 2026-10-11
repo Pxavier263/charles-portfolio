@@ -91,6 +91,83 @@ export const activities: Activity[] = [
     enabled: true,
   },
   {
+    id: "comwatch-stakeholder-meeting",
+    title: "Com-WATCH Baseline Findings: Stakeholder Meeting",
+    date: "24 September 2026",
+    sortDate: "2026-09-24",
+    location: "Nigeria",
+    category: "Stakeholder engagement",
+    description:
+      "Stakeholder meeting convened with the Nigeria Centre for Disease Control and Prevention and Jhpiego to review baseline findings from Com-WATCH, a project using digital community reporting of suspected substandard and falsified antibiotics, alongside Nigeria's wider AMR surveillance priorities and plans for the 5th High-Level Ministerial Conference on AMR.",
+    photos: [
+      {
+        alt: "Group photo of participants at the Com-WATCH stakeholder meeting, with Com-WATCH and Jhpiego banners on either side",
+        caption: "Com-WATCH stakeholder meeting",
+        src: "/images/activities/comwatch-stakeholder-meeting-2026.jpg",
+      },
+    ],
+    enabled: true,
+  },
+  {
+    id: "nicade-amr-dialogue",
+    title: "NiCaDe AMR Stakeholder Dialogue: Hub-and-Spoke Model for Surveillance and Stewardship",
+    date: "9–10 July 2026",
+    sortDate: "2026-07-09",
+    location: "Abuja, Nigeria",
+    category: "Workshop",
+    description:
+      "Two-day dialogue convened by the Nigeria Centre for Disease Control and Prevention with the Robert Koch Institute, reviewing ten years of AMR surveillance in Nigeria and shaping a hub-and-spoke model for AMR surveillance, diagnostic stewardship and antimicrobial use. Attended as part of Ducit Blue Solutions, whose support for the National Antimicrobial Stewardship Essay Competition was acknowledged at the event.",
+    photos: [
+      {
+        alt: "Group photo of workshop participants beside the Implementing Sustainable Stewardship Programmes banner, Abuja",
+        caption: "Stakeholder dialogue participants, Abuja",
+        src: "/images/activities/nicade-amr-dialogue-2026-group.jpg",
+      },
+      {
+        alt: "Participants in a small-group discussion around a table during the stakeholder dialogue",
+        caption: "Group work session",
+        src: "/images/activities/nicade-amr-dialogue-2026-session.jpg",
+      },
+    ],
+    enabled: true,
+  },
+  {
+    id: "cwpams-closeout-2025",
+    title: "CwPAMS 2.5 Nigeria Close-Out & Sustainability Event",
+    date: "10 December 2025",
+    sortDate: "2025-12-10",
+    location: "Abuja, Nigeria",
+    category: "Stakeholder engagement",
+    description:
+      "Close-out of the Commonwealth Partnerships for Antimicrobial Stewardship (CwPAMS 2.5) in Nigeria, organised by Ducit Blue Solutions with Global Health Partnerships and the Commonwealth Pharmacists Association. The five Nigerian Health Partnerships, national agencies and partners reviewed results and agreed how to sustain antimicrobial stewardship beyond the funding period.",
+    photos: [
+      {
+        alt: "Group photo of participants at the CwPAMS 2.5 Nigeria Close-Out and Sustainability Event in Abuja, in front of the event banners",
+        caption: "CwPAMS 2.5 close-out, Abuja",
+        src: "/images/activities/cwpams-closeout-2025.jpg",
+      },
+    ],
+    enabled: true,
+  },
+  {
+    id: "cwpams2-sharing-learning",
+    title: "CwPAMS 2 Nigeria Sharing & Learning Event",
+    date: "March 2025",
+    sortDate: "2025-03",
+    location: "Nigeria",
+    category: "Stakeholder engagement",
+    description:
+      "National event marking the end of CwPAMS 2, held with the Nigeria Centre for Disease Control and Prevention and the Pharmaceutical Society of Nigeria, with in-country coordination by Ducit Blue Solutions. The five Health Partnerships shared their results and five pharmacists graduated from the Africa Leadership Fellowship in antimicrobial stewardship.",
+    photos: [
+      {
+        alt: "Participants standing beneath the CwPAMS 2 Grant Nigeria Sharing and Learning Event banner",
+        caption: "CwPAMS 2 sharing & learning event",
+        src: "/images/activities/cwpams2-sharing-learning-2025.jpg",
+      },
+    ],
+    enabled: true,
+  },
+  {
     id: "cphia-2025",
     title: "CPHIA 2025",
     date: "22–25 October 2025",
