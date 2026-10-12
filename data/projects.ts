@@ -45,9 +45,9 @@ export const projects: Project[] = [
   {
     id: "nigeria-amr-nap-2",
     cover: {
-      alt: "Participants holding certificates at the AMR NAP 2.0 budgeting and costing workshop in Abuja",
-      caption: "AMR NAP 2.0 budgeting and costing workshop, Abuja",
-      src: "/images/activities/nap2-costing-2023.jpg",
+      alt: "Workshop participants in front of the AMR NAP 2.0 Workshop 3 banner (Strategic and Operational Plan and M&E Framework) in Abuja",
+      caption: "AMR NAP 2.0 Workshop 3: Strategic and Operational Plan & M&E Framework, Abuja, October 2023",
+      src: "/images/projects/nap2-workshop3-cover.jpg",
     },
     type: "Policy development",
     sectors: ["Global health & AMR", "One Health"],

@@ -1,8 +1,8 @@
 "use client";
-import { Linkedin, Quote } from "lucide-react";
+import { ChevronLeft, ChevronRight, Linkedin, Quote } from "lucide-react";
 import Papa from "papaparse";
-import { useEffect, useState } from "react";
-import { REVIEWS_CSV_URL, REVIEWS_INITIAL_COUNT } from "@/lib/config";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { REVIEWS_AUTOPLAY_MS, REVIEWS_CSV_URL } from "@/lib/config";
 import { Stars } from "../contact/Reviews";
 
 interface LiveReview {
@@ -103,10 +103,13 @@ function Avatar({ name, photoId }: { name: string; photoId: string | null }) {
   );
 }
 
+/** One card per view on phones, two on tablets, three on desktop (gap is 1.25rem). */
+const SLIDE = "w-full flex-none snap-start md:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-2.5rem)/3)]";
+
 function ReviewCard({ r }: { r: LiveReview }) {
   const byline = [r.role, r.organisation].filter(Boolean).join(", ");
   return (
-    <li className="card flex flex-col p-7">
+    <li className={`card flex flex-col p-7 ${SLIDE}`}>
       <div className="flex items-center justify-between gap-3">
         <Quote className="h-6 w-6 text-teal-700 dark:text-teal-300" aria-hidden />
         {r.rating !== null && <Stars value={r.rating} />}
@@ -137,7 +140,7 @@ function ReviewCard({ r }: { r: LiveReview }) {
 
 function SkeletonCard() {
   return (
-    <li className="card flex animate-pulse flex-col p-7" aria-hidden>
+    <li className={`card flex animate-pulse flex-col p-7 ${SLIDE}`} aria-hidden>
       <div className="h-4 w-24 rounded bg-[rgb(var(--line)/0.12)]" />
       <div className="mt-5 space-y-2">
         <div className="h-3.5 rounded bg-[rgb(var(--line)/0.12)]" />
@@ -155,11 +158,17 @@ function SkeletonCard() {
 /**
  * Live reviews pulled in the browser from the published Google Sheet (lib/config.ts),
  * so new approved reviews appear without rebuilding the site.
+ * Shown as a single-row carousel: 3 cards on desktop, 2 on tablet, 1 on phones.
+ * It advances one card at a time, pauses on hover, focus or touch, and stays still
+ * for visitors who prefer reduced motion.
  */
 export function LiveReviews() {
   const [state, setState] = useState<"loading" | "ready" | "error">("loading");
   const [reviews, setReviews] = useState<LiveReview[]>([]);
-  const [expanded, setExpanded] = useState(false);
+  const [paused, setPaused] = useState(false);
+  const [overflowing, setOverflowing] = useState(false);
+  const [reduceMotion, setReduceMotion] = useState(false);
+  const trackRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
     const ctrl = new AbortController();
@@ -180,37 +189,94 @@ export function LiveReviews() {
     return () => ctrl.abort();
   }, []);
 
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setReduceMotion(mq.matches);
+    const on = () => setReduceMotion(mq.matches);
+    mq.addEventListener("change", on);
+    return () => mq.removeEventListener("change", on);
+  }, []);
+
+  // Only move (and show arrows) when there are more reviews than fit in one row.
+  useEffect(() => {
+    const el = trackRef.current;
+    if (!el) return;
+    const check = () => setOverflowing(el.scrollWidth > el.clientWidth + 4);
+    check();
+    const ro = new ResizeObserver(check);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [reviews, state]);
+
+  const step = useCallback(
+    (dir: 1 | -1) => {
+      const el = trackRef.current;
+      const card = el?.querySelector("li");
+      if (!el || !card) return;
+      const behavior: ScrollBehavior = reduceMotion ? "auto" : "smooth";
+      const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4;
+      const atStart = el.scrollLeft <= 4;
+      if (dir === 1 && atEnd) el.scrollTo({ left: 0, behavior });
+      else if (dir === -1 && atStart) el.scrollTo({ left: el.scrollWidth, behavior });
+      else el.scrollBy({ left: dir * (card.offsetWidth + 20), behavior });
+    },
+    [reduceMotion],
+  );
+
+  useEffect(() => {
+    if (!overflowing || paused || reduceMotion) return;
+    const id = window.setInterval(() => {
+      if (!document.hidden) step(1);
+    }, REVIEWS_AUTOPLAY_MS);
+    return () => window.clearInterval(id);
+  }, [overflowing, paused, reduceMotion, step]);
+
   // Fail quietly: no section at all if the sheet can't be reached.
   if (state === "error") return null;
 
-  const shown = expanded ? reviews : reviews.slice(0, REVIEWS_INITIAL_COUNT);
-  const hidden = reviews.length - shown.length;
+  const track = "mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden";
 
   return (
     <section id="reviews" aria-labelledby="reviews-title" aria-busy={state === "loading"} className="band-canvas scroll-mt-20 py-16 md:py-20">
       <div className="container">
-        <p className="eyebrow">Reviews</p>
-        <h2 id="reviews-title" className="mt-3 text-2xl font-medium md:text-3xl">What clients and mentees say</h2>
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p className="eyebrow">Reviews</p>
+            <h2 id="reviews-title" className="mt-3 text-2xl font-medium md:text-3xl">What clients and mentees say</h2>
+          </div>
+          {overflowing && (
+            <div className="flex gap-2">
+              <button type="button" onClick={() => step(-1)} aria-label="Previous review" className="grid h-10 w-10 place-items-center rounded-full border hairline transition-colors hover:border-orange-500 hover:text-orange-600 dark:hover:text-orange-300">
+                <ChevronLeft className="h-5 w-5" aria-hidden />
+              </button>
+              <button type="button" onClick={() => step(1)} aria-label="Next review" className="grid h-10 w-10 place-items-center rounded-full border hairline transition-colors hover:border-orange-500 hover:text-orange-600 dark:hover:text-orange-300">
+                <ChevronRight className="h-5 w-5" aria-hidden />
+              </button>
+            </div>
+          )}
+        </div>
 
         {state === "loading" ? (
-          <ul className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <ul className={track}>
             {[0, 1, 2].map((i) => <SkeletonCard key={i} />)}
           </ul>
         ) : reviews.length === 0 ? (
           <p className="mt-6 muted">New reviews will appear here soon.</p>
         ) : (
-          <>
-            <ul className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {shown.map((r, i) => <ReviewCard key={`${r.name}-${i}`} r={r} />)}
-            </ul>
-            {hidden > 0 && (
-              <div className="mt-8 text-center">
-                <button type="button" onClick={() => setExpanded(true)} className="btn-ghost">
-                  Show more ({hidden})
-                </button>
-              </div>
-            )}
-          </>
+          <ul
+            ref={trackRef}
+            className={track}
+            aria-label="Reviews"
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+            onFocus={() => setPaused(true)}
+            onBlur={(e) => {
+              if (!e.currentTarget.contains(e.relatedTarget as Node)) setPaused(false);
+            }}
+            onTouchStart={() => setPaused(true)}
+          >
+            {reviews.map((r, i) => <ReviewCard key={`${r.name}-${i}`} r={r} />)}
+          </ul>
         )}
       </div>
     </section>

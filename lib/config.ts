@@ -6,5 +6,5 @@
 export const REVIEWS_CSV_URL =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vQSZM8zL9nezI_NZrDvko44xszFyf9byingz14mHPGI42iysv3f-9H6zEE0RxwpY-S6zXiGhnQDwZPw/pub?gid=1647182804&single=true&output=csv";
 
-/** How many reviews show before the "Show more" button. */
-export const REVIEWS_INITIAL_COUNT = 6;
+/** How often the reviews carousel moves to the next card (milliseconds). */
+export const REVIEWS_AUTOPLAY_MS = 5000;
