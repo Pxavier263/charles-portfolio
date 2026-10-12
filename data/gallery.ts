@@ -163,6 +163,25 @@ export const activities: Activity[] = [
     enabled: true,
   },
   {
+    id: "nap2-smart-choice-2025",
+    title: "Smart Choice Process: prioritising Nigeria's AMR National Action Plan 2.0",
+    date: "5–7 August 2025",
+    sortDate: "2025-08-05",
+    location: "Lagos, Nigeria",
+    category: "Workshop",
+    description:
+      "Three-day multisectoral workshop, facilitated by the AMR Policy Accelerator (Global Strategy Lab), to prioritise activities in Nigeria's One Health AMR National Action Plan 2.0. Participants scored 48 activities against seven indicators including cost, impact and equity, then agreed 18 priority activities across the plan's six strategic objectives to guide its work plan and mid-term review. Participated in the scoring and the multisectoral group discussions.",
+    photos: [
+      {
+        alt: "Group photo of participants at the Smart Choice Process prioritisation workshop for Nigeria's AMR National Action Plan 2.0 in Lagos",
+        caption: "Smart Choice Process workshop, Lagos, August 2025",
+        src: "/images/activities/nap2-smart-choice-2025.jpg",
+      },
+    ],
+    projectId: "nigeria-amr-nap-2",
+    enabled: true,
+  },
+  {
     id: "cwpams-closeout-2025",
     title: "CwPAMS 2.5 Nigeria Close-Out & Sustainability Event",
     date: "10 December 2025",
@@ -190,6 +209,11 @@ export const activities: Activity[] = [
     description:
       "National event marking the end of CwPAMS 2, held with the Nigeria Centre for Disease Control and Prevention and the Pharmaceutical Society of Nigeria, with in-country coordination by Ducit Blue Solutions. The five Health Partnerships shared their results and five pharmacists graduated from the Africa Leadership Fellowship in antimicrobial stewardship.",
     photos: [
+      {
+        alt: "Large group photo of participants on the steps at the CwPAMS 2 Nigeria Sharing and Learning Event, beside the Commonwealth Partnerships for Antimicrobial Stewardship Phase Two banner",
+        caption: "CwPAMS 2 sharing & learning event: participants",
+        src: "/images/activities/cwpams2-sharing-learning-2025-group.jpg",
+      },
       {
         alt: "Participants standing beneath the CwPAMS 2 Grant Nigeria Sharing and Learning Event banner",
         caption: "CwPAMS 2 sharing & learning event",

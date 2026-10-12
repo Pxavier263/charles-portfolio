@@ -85,6 +85,7 @@ export const projects: Project[] = [
       "Represented Ducit Blue Foundation in the national NAP 2.0 development workshops",
       "Took part in stakeholder mapping, the situational and SWOT analysis, strategic and operational planning with M&E, and budgeting and costing",
       "Listed among contributors in Annex 2 of the published plan",
+      "Took part in the August 2025 Smart Choice Process workshop in Lagos, which prioritised 18 of the plan's activities for implementation",
     ],
     approach: [
       "Review of NAP 1.0 and a One Health situational analysis of AMR in Nigeria",

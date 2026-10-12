@@ -8,3 +8,6 @@ export const REVIEWS_CSV_URL =
 
 /** How often the reviews carousel moves to the next card (milliseconds). */
 export const REVIEWS_AUTOPLAY_MS = 5000;
+
+/** Reviews longer than this (characters) are shortened with a "See more" button. */
+export const REVIEWS_MAX_CHARS = 250;

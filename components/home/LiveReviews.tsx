@@ -2,7 +2,7 @@
 import { ChevronLeft, ChevronRight, Linkedin, Quote } from "lucide-react";
 import Papa from "papaparse";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { REVIEWS_AUTOPLAY_MS, REVIEWS_CSV_URL } from "@/lib/config";
+import { REVIEWS_AUTOPLAY_MS, REVIEWS_CSV_URL, REVIEWS_MAX_CHARS } from "@/lib/config";
 import { Stars } from "../contact/Reviews";
 
 interface LiveReview {
@@ -106,15 +106,36 @@ function Avatar({ name, photoId }: { name: string; photoId: string | null }) {
 /** One card per view on phones, two on tablets, three on desktop (gap is 1.25rem). */
 const SLIDE = "w-full flex-none snap-start md:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-2.5rem)/3)]";
 
+/** Shortens text to at most `max` characters, ending on a whole word. */
+function truncateWords(text: string, max: number) {
+  const cut = text.slice(0, max);
+  const lastSpace = cut.lastIndexOf(" ");
+  return (lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : cut).replace(/[\s.,;:!?-]+$/, "");
+}
+
 function ReviewCard({ r }: { r: LiveReview }) {
   const byline = [r.role, r.organisation].filter(Boolean).join(", ");
+  const isLong = r.feedback.length > REVIEWS_MAX_CHARS;
+  const [open, setOpen] = useState(false);
+  const text = isLong && !open ? `${truncateWords(r.feedback, REVIEWS_MAX_CHARS)}…` : r.feedback;
   return (
     <li className={`card flex flex-col p-7 ${SLIDE}`}>
       <div className="flex items-center justify-between gap-3">
         <Quote className="h-6 w-6 text-teal-700 dark:text-teal-300" aria-hidden />
         {r.rating !== null && <Stars value={r.rating} />}
       </div>
-      <blockquote className="mt-4 whitespace-pre-line font-serif text-lg leading-snug">&ldquo;{r.feedback}&rdquo;</blockquote>
+      <blockquote className="mt-4 whitespace-pre-line font-serif text-lg leading-snug">&ldquo;{text}&rdquo;</blockquote>
+      {isLong && (
+        <button
+          type="button"
+          onClick={() => setOpen((o) => !o)}
+          aria-expanded={open}
+          className="mt-2 self-start text-sm font-semibold text-teal-700 underline decoration-orange-500 underline-offset-4 hover:text-orange-600 dark:text-teal-300 dark:hover:text-orange-300"
+        >
+          {open ? "See less" : "See more"}
+          <span className="sr-only"> of {r.name}&apos;s review</span>
+        </button>
+      )}
       <div className="mt-auto flex items-center gap-3 pt-6">
         <Avatar name={r.name} photoId={r.photoId} />
         <div className="min-w-0 flex-1 text-sm">
