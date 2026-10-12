@@ -255,7 +255,7 @@ export function LiveReviews() {
   // Fail quietly: no section at all if the sheet can't be reached.
   if (state === "error") return null;
 
-  const track = "mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden";
+  const track = "relative mt-8 flex items-start md:items-stretch snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden";
 
   return (
     <section id="reviews" aria-labelledby="reviews-title" aria-busy={state === "loading"} className="band-canvas scroll-mt-20 py-16 md:py-20">
