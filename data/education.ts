@@ -95,4 +95,12 @@ export const certifications: Certification[] = [
     image: { alt: "Certificate image", caption: "Certificate image", src: "/images/certificates/cert-8.jpg" },
     enabled: true,
   },
+  {
+    id: "tdr-research-communication",
+    name: "Research Communication",
+    issuer: "TDR (UNICEF/UNDP/World Bank/WHO)",
+    year: "2026",
+    image: { alt: "TDR Research Communication certificate of completion", caption: "Certificate image", src: "/images/certificates/tdr-research-communication.jpg" },
+    enabled: true,
+  },
 ];
